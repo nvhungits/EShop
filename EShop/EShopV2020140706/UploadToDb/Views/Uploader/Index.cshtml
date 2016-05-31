@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Document>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Upload demo</h2>
+
+@using (Html.BeginForm("Upload", "Uploader", 
+    FormMethod.Post, new {enctype="multipart/form-data" }))
+{
+    <input type="file" name="document" />
+    <input type="submit" value="Upload" />
+}
+
+@foreach (var c in Model)
+{
+    <ul>
+        <li><a href="/Uploader/Download/@c.Id">Download</a></li>
+        <li>@c.Mime</li>
+    </ul>
+}
