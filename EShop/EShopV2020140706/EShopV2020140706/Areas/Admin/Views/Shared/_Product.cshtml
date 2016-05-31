@@ -1,0 +1,33 @@
+﻿<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UnitBrief</th>
+        <th>UnitPrice</th>
+        <th>Logo</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (Product c in ViewBag.Products)
+    {
+        <tr>
+            <td>@c.Id</td>
+            <td>@c.Name</td>
+            <td>@c.UnitBrief</td>
+            <td>@c.UnitPrice</td>
+            <td style="width:150px">
+                <img class="img-responsive" style="max-width:150px" src="~/images/products/@c.Image" />
+            </td>
+            <td>
+                <a href="/Admin/Product/Delete/@c.Id">
+                    <img src="~/images/icons/Task%20list.png" />
+                </a>
+            </td>
+            <td>
+                <a href="/Admin/Product/Edit/@c.Id">
+                    <img src="~/images/icons/Edit.png" />
+                </a>
+            </td>
+        </tr>
+    }
+</table>

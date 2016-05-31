@@ -1,0 +1,96 @@
+﻿/*--header--*/
+.nn-header{
+    position:relative;
+    height:170px;
+}
+.nn-company{
+    font-family:Impact;
+    font-size:35px;
+    text-shadow:0 0 2px black;
+    position:absolute;
+    top:45px;
+    padding-bottom:2px;
+    border-bottom:1px dotted gray;
+}
+.nn-logo{
+    position:absolute;
+    right:0px;
+    width:400px;
+}
+.nn-slogan{
+    position:absolute;
+    top:100px;
+}
+
+/*--sheet--*/
+.nn-sheet{
+    box-shadow:0 0 5px lightgray;
+    border-radius:10px;
+    padding:5px;
+    position:relative;
+    top:-10px;
+}
+
+.nn-body{
+    padding:5px;
+}
+
+/*--home--*/
+.nn-cate-3 ul{
+    padding-left:0px;
+    margin:0px;
+    list-style:none;
+    font-size:smaller;
+}
+.nn-cate-3 ul li{
+    padding:3px 0;
+}
+.nn-cate-3 legend{
+    border-bottom:5px double lightgray;
+    margin-bottom:5px;
+    font-variant:small-caps;
+}
+
+/*--Product/List--*/
+.nn-col-4{
+    padding:10px !important;
+}
+.nn-box{
+    border-radius:10px;
+    box-shadow:0 0 5px gray;
+    text-align:center;
+    position:relative;
+}
+.nn-box-image{
+    height:150px;
+    max-width:100%;
+    margin-bottom:30px;
+}
+.nn-box-feature{
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+.nn-box-name{
+    font-size:smaller;
+    padding:5px 0;
+}
+.nn-box-footer{
+    position:absolute;
+    bottom:5px;
+    left:5%;
+    width:90%;
+}
+
+/*--Product/Detail--*/
+
+.nn-relate img{
+    width:60px;
+    height:60px;
+    box-shadow:0 0 5px gray;
+    border-radius:8px;
+    margin:5px;
+}
+.nn-relate img:hover{
+    box-shadow:0 0 5px red;
+}

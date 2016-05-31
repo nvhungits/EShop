@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Effects - Effect demo</title>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+
+    <link href="jquery-ui.css" rel="stylesheet" />
+    <script src="jquery-ui.js"></script>
+    <style>
+        .fly-effect {
+            border: 2px dotted gray;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#nn-cart").click(function () {
+                options = { to: "#nn-cart", className: "fly-effect" };
+                $("#effect").effect("transfer", options, 500, function () { });
+            });
+        });
+    </script>
+</head>
+<body>
+    <img id="effect" src="../images/products/1001.jpg" />
+    <button id="nn-cart">Run Effect</button>
+</body>
+</html>
