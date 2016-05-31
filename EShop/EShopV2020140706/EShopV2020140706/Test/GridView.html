@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#add").click(function () {
+                addRow();
+            });
+
+            $("#del").click(function () {
+                //$("#grid").remove("#grid tr:last");
+                //$("#grid").detach("#grid tr:last")
+                alert($("#grid").html())
+            });
+
+            $("#grid input:last").keydown(function (e) {
+                if (e.keyCode == 9) {
+                    addRow();
+                    $(this).unbind("keydown")
+                }
+            });
+
+            function addRow() {
+                newTr = $("#grid tr:last").clone();
+                $("#grid").append(newTr);
+
+                $("#grid input:last").keydown(function (e) {
+                    if (e.keyCode == 9) {
+                        addRow();
+                        $(this).unbind("keydown");
+                    }
+                });
+            }
+        });
+    </script>
+    <style>
+        table{
+            border-collapse:collapse;
+        }
+        table input{
+            margin:0; 
+            padding:5px 0; 
+            border:0; 
+            width:100%; 
+            min-width:50px;
+        }
+        table td{
+            padding:0; 
+            margin:0; 
+            border:1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <table id="grid">
+        <tr>
+            <td><input/></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+        </tr>
+    </table>
+    <input type="button" value="+" id="add" />
+    <input type="button" value="-" id="del" />
+</body>
+</html>

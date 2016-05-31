@@ -1,0 +1,53 @@
+﻿
+<div class="breadLine">
+    <div class="arrow"></div>
+    <div class="adminControl active">
+        Hi, @User.Identity.Name
+    </div>
+</div>
+<div class="admin" style="display: block;">
+    <div class="image">
+        <img src="Content/img/users/male.jpg" class="img-thumbnail">
+    </div>
+    <ul class="control">
+        <li>
+            <span class="glyphicon glyphicon-comment"></span>
+            <a href="#">Messages</a>
+            <a href="#" class="caption red link_navPopMessages2">1</a>
+            <!-- Message -->
+            <div id="navPopMessages2" class="popup" style="display: none;">
+                <!-- ******Message Header******** -->
+                <div class="head clearfix">
+                    <div class="arrow"></div>
+                    <span class="isw-chats"></span>
+                    <span class="name">Personal messages</span>
+                </div>
+                <!-- ******Message Content******** -->
+                <div class="block messages scrollBox">
+                    <div class="scroll mCustomScrollbar">
+                        <div class="item clearfix">
+                            <div class="image"><a href="#"><img src="/images/customers/man.jpg" class="img-thumbnail"></a></div>
+                            <div class="info">
+                                <a href="#" class="name">System</a>
+                                <p>Hi @User.Identity.Name,</p>
+                                <p>Welcome to ITL Company. Have a good day. </p>
+                                <span>19 feb 2016 12:45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ********Message Footer******* -->
+                <div class="footer">
+                    <button class="btn btn-default link_navPopMessages2" type="button">Close</button>
+                </div>
+                <!-- ************************ -->
+            </div>
+            <!-- End Message -->
+        </li>
+        <li><span class="glyphicon glyphicon-cog"></span> <a href="form.html">Settings</a></li>
+        <li><span class="glyphicon glyphicon-share-alt"></span> <a href="/Account/LogOff">Logout</a></li>
+    </ul>
+    <div class="info">
+        <span>Welcom back!<br />Your last visit: 24.10.2016 in 19:55</span>
+    </div>
+</div>

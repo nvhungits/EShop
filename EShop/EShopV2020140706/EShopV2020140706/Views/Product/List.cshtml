@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Product List</h2>
+
+@foreach (var p in Model)
+{
+    <div class="col-md-4 nn-col-4">
+        <div class="nn-box">
+            <div class="nn-box-name">@p.Name</div>
+            <!--<a href="/Product/Detail/@p.Id">-->
+            <a href="/chi-tiet-hang-hoa/@p.Id/@p.Name.ToAscii().ToLower()">
+                <img id="i@(p.Id)" class="nn-box-image" src="/images/products/@p.Image" />
+            </a>
+            <div class="nn-box-footer">
+                <div class="pull-left">$ @p.UnitPrice</div>
+                <div class="pull-right">
+                    <img class="add-to-cart" data-id="@p.Id" src="~/images/icons/Add%20to%20basket.png" />
+                    <img src="~/images/icons/Letter.png" />
+                    <img src="~/images/icons/Favourites.png" />
+                </div>
+            </div>
+            @if (p.Special)
+            {
+                <img class="nn-box-feature" src="~/images/special_icon.gif" />
+            }
+            else if (p.Latest)
+            {
+                <img class="nn-box-feature" src="~/images/new_icon.gif" />
+            }
+            else if (p.Discount > 0)
+            {
+                <img class="nn-box-feature" src="~/images/promo_icon.gif" />
+            }
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            $(".add-to-cart").click(function () {
+                pid = $(this).attr("data-id");
+                $.ajax({
+                    url: "/Cart/Add",
+                    data: {id: pid},
+                    success: function (response) {
+                        $("#nn-cart-count").html(response.Count);
+                        $("#nn-cart-total").html(response.Total);
+                    }
+                });
+
+                // hieu ung bay vao gio
+                cssfly = ".fly-effect {background:url(?);background-size:100% 100%;}";
+                src = $("#i" + pid).attr("src");
+                newcssfly = cssfly.replace("?", src);
+                $("#cart-fly").html(newcssfly);
+
+                options = { to: "#nn-cart-image", className: "fly-effect" };
+                $("#i"+pid).effect("transfer", options, 500, function () { });
+            });
+        });
+    </script>
+
+    <style id="cart-fly">
+        .fly-effect {
+            background:url(/images/products/1003.jpg);
+            background-size:100% 100%;
+        }
+    </style>
+}
+
