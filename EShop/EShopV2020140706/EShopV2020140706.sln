@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopV2020140706", "EShopV2020140706\EShopV2020140706.csproj", "{C8ED2CD5-3056-40C5-A4CF-01E4D5B62B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadToDb", "UploadToDb\UploadToDb.csproj", "{AD494096-DB74-4CC3-A643-65F0211E28B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebAPI", "MyWebAPI\MyWebAPI.csproj", "{69240EC4-3605-4307-94EA-EDBCCD42A999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApiClient", "MyWebApiClient\MyWebApiClient.csproj", "{FB3A708B-E8BF-453E-A707-F322B5A60729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc5Bank", "Mvc5Bank\Mvc5Bank.csproj", "{508C27D5-2357-4F6E-8C32-FBF20C0A6A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc5Auth", "..\Mvc5Auth\Mvc5Auth\Mvc5Auth.csproj", "{C6D675EE-0036-408B-BD99-9492FF512C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityMVC5", "SecurityMVC5\SecurityMVC5.csproj", "{D1B1227E-F555-4E7D-9876-A9DAE7FC133D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8ED2CD5-3056-40C5-A4CF-01E4D5B62B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8ED2CD5-3056-40C5-A4CF-01E4D5B62B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8ED2CD5-3056-40C5-A4CF-01E4D5B62B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8ED2CD5-3056-40C5-A4CF-01E4D5B62B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD494096-DB74-4CC3-A643-65F0211E28B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD494096-DB74-4CC3-A643-65F0211E28B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD494096-DB74-4CC3-A643-65F0211E28B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD494096-DB74-4CC3-A643-65F0211E28B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69240EC4-3605-4307-94EA-EDBCCD42A999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69240EC4-3605-4307-94EA-EDBCCD42A999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69240EC4-3605-4307-94EA-EDBCCD42A999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69240EC4-3605-4307-94EA-EDBCCD42A999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3A708B-E8BF-453E-A707-F322B5A60729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3A708B-E8BF-453E-A707-F322B5A60729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3A708B-E8BF-453E-A707-F322B5A60729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3A708B-E8BF-453E-A707-F322B5A60729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508C27D5-2357-4F6E-8C32-FBF20C0A6A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508C27D5-2357-4F6E-8C32-FBF20C0A6A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508C27D5-2357-4F6E-8C32-FBF20C0A6A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508C27D5-2357-4F6E-8C32-FBF20C0A6A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D675EE-0036-408B-BD99-9492FF512C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D675EE-0036-408B-BD99-9492FF512C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D675EE-0036-408B-BD99-9492FF512C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D675EE-0036-408B-BD99-9492FF512C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B1227E-F555-4E7D-9876-A9DAE7FC133D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B1227E-F555-4E7D-9876-A9DAE7FC133D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B1227E-F555-4E7D-9876-A9DAE7FC133D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B1227E-F555-4E7D-9876-A9DAE7FC133D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
