@@ -30,21 +30,8 @@ namespace ITLNow.Domain
             menu.Add(new ApplicationMenu { Id = 16, nameOption = "Sample Pages", imageClass = "fa fa-files-o fa-fw", status = true, isParent = true, parentId = 0 });
             menu.Add(new ApplicationMenu { Id = 17, nameOption = "Blank Page", controller = "Home", action = "Blank", status = true, isParent = false, parentId = 16 });
             menu.Add(new ApplicationMenu { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
-
-
-            /*System definition*/
-            menu.Add(new ApplicationMenu { Id = 19, nameOption = "System Definition", status = true, isParent = true, parentId = 0, imageClass = "fa fa-cogs" });
-            menu.Add(new ApplicationMenu { Id = 20, nameOption = "Application Menus", controller = "SystemDefinition", action = "ApplicationMenu" ,status = true, isParent = false, parentId = 19});
-
-
+			
             return menu.ToList();
-        }
-
-        public IEnumerable<tables> dbObjectItems()
-        {
-            var dbob = new List<tables>();
-            dbob.Add(new tables { Id = 1, title = "Application Menu", name = "application_menu", active = true});
-            return dbob.ToList();
         }
     }
 }
