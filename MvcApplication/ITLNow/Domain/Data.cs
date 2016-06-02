@@ -40,10 +40,10 @@ namespace ITLNow.Domain
             return menu.ToList();
         }
 
-        public IEnumerable<dbObject> dbObjectItems()
+        public IEnumerable<tables> dbObjectItems()
         {
-            var dbob = new List<dbObject>();
-            dbob.Add(new dbObject { Id = 1, label = "Application Menu", name = "application_menu", active = true});
+            var dbob = new List<tables>();
+            dbob.Add(new tables { Id = 1, title = "Application Menu", name = "application_menu", active = true});
             return dbob.ToList();
         }
     }
