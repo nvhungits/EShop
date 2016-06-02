@@ -14,7 +14,7 @@ namespace ITLNow.Controllers
         public ActionResult Index()
         {
             var data = new Data();
-            return PartialView("_Navbar", data.navbarItems().ToList());
+            return PartialView("_Navbar", data.ApplicationMenuItems().ToList());
         }
     }
 }
