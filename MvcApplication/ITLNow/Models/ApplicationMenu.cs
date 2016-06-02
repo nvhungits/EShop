@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ITLNow.Models
 {
-    public class Navbar
+    public class ApplicationMenu
     {
         public int Id { get; set; }
         public string nameOption { get; set; }
