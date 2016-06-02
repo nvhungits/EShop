@@ -34,7 +34,7 @@ namespace ITLNow.Domain
 
             /*System definition*/
             menu.Add(new ApplicationMenu { Id = 19, nameOption = "System Definition", status = true, isParent = true, parentId = 0, imageClass = "fa fa-cogs" });
-            menu.Add(new ApplicationMenu { Id = 20, nameOption = "Application Menu", controller = "SystemDefinition", action = "ApplicationMenu" ,status = true, isParent = false, parentId = 19});
+            menu.Add(new ApplicationMenu { Id = 20, nameOption = "Application Menus", controller = "SystemDefinition", action = "ApplicationMenu" ,status = true, isParent = false, parentId = 19});
 
 
             return menu.ToList();
