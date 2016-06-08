@@ -29,8 +29,19 @@ namespace ITL.Domain
             menu.Add(new Navbar { Id = 16, nameOption = "Sample Pages", imageClass = "fa fa-files-o fa-fw", status = true, isParent = true, parentId = 0 });
             menu.Add(new Navbar { Id = 17, nameOption = "Blank Page", controller = "Home", action = "Blank", status = true, isParent = false, parentId = 16 });
             menu.Add(new Navbar { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
-
+           
             return menu.ToList();
+        }
+
+        public IEnumerable<Table> tableItems()
+        {
+            var tables = new List<Table>();
+            tables.Add(new Table { label = "User", name="User" });
+            tables.Add(new Table { label = "Group", name = "Group" });
+            tables.Add(new Table { label = "Role", name = "Role" });
+            tables.Add(new Table { label = "Application Menu", name = "ApplicationMenu" });
+            tables.Add(new Table { label = "Module", name = "Module" });
+            return tables.ToList();
         }
     }
 }
