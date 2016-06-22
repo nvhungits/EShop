@@ -18,11 +18,4 @@ namespace ITL.Models
         public int parentId { get; set; }
         public bool isParent { get; set; }
     }
-
-    public class Table
-    {
-        public string label { set; get; }
-        public string name { set; get; }
-        public string type { set; get; }
-    }
 }

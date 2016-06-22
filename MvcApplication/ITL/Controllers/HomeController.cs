@@ -8,6 +8,13 @@ namespace ITL.Controllers
 {
     public class HomeController : Controller
     {
+
+        //Add Controller for Navigation Menu
+        public ActionResult Users()
+        {
+            return View("Users");
+        }
+
         public ActionResult Index()
         {
             return View();

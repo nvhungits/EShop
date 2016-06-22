@@ -1,6 +1,8 @@
 ﻿using ITL.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -29,19 +31,27 @@ namespace ITL.Domain
             menu.Add(new Navbar { Id = 16, nameOption = "Sample Pages", imageClass = "fa fa-files-o fa-fw", status = true, isParent = true, parentId = 0 });
             menu.Add(new Navbar { Id = 17, nameOption = "Blank Page", controller = "Home", action = "Blank", status = true, isParent = false, parentId = 16 });
             menu.Add(new Navbar { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
-           
+
+            //Add Navigation Menu
+            menu.Add(new Navbar { Id = 19, nameOption = "Users", controller = "Home", action = "Users", imageClass = "fa fa-users fa-fw", status = true, isParent = false, parentId = 0 });
             return menu.ToList();
         }
 
-        public IEnumerable<Table> tableItems()
+        public IEnumerable<User> userItems()
         {
-            var tables = new List<Table>();
-            tables.Add(new Table { label = "User", name="User" });
-            tables.Add(new Table { label = "Group", name = "Group" });
-            tables.Add(new Table { label = "Role", name = "Role" });
-            tables.Add(new Table { label = "Application Menu", name = "ApplicationMenu" });
-            tables.Add(new Table { label = "Module", name = "Module" });
-            return tables.ToList();
+            string con = ConfigurationManager.ConnectionStrings["DBITL"].ConnectionString;
+            SqlConnection connection = new SqlConnection(con);
+            connection.Open();
+
+            SqlCommand cmdStr = new SqlCommand("Select * from Table", connection);
+            SqlDataReader dr = cmdStr.ExecuteReader();
+            dr.Read();
+
+            var userList = new List<User>();
+
+            userList.Add(new User { Name = dr[0].ToString()});
+
+            return userList.ToList();
         }
     }
 }

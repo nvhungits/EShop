@@ -21,7 +21,6 @@ D:\EShopV\trunk\MvcApplication\ITL\bin\System.Web.WebPages.Deployment.xml
 D:\EShopV\trunk\MvcApplication\ITL\bin\System.Web.WebPages.Razor.xml
 D:\EShopV\trunk\MvcApplication\ITL\bin\Antlr3.Runtime.pdb
 D:\EShopV\trunk\MvcApplication\ITL\bin\Newtonsoft.Json.xml
-D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\ITL.csprojResolveAssemblyReference.cache
 D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\sb-admin-2.Web.dll
 D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\sb-admin-2.Web.pdb
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\sb-admin-2.Web.dll.config
