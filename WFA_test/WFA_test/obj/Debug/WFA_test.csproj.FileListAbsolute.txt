@@ -1,0 +1,10 @@
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\bin\Debug\WFA_test.exe.config
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.Views.Login.resources
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\bin\Debug\WFA_test.exe
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\bin\Debug\WFA_test.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.exe
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\WFA_test\WFA_test\obj\Debug\WFA_test.Views.Main.resources
