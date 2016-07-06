@@ -22,11 +22,11 @@ namespace WFA_test.Models
             this.TableName = tbl;
             this.Active = active;
         }
-
+        
         public List<Table> getAll()
         {
-            IEnumerable<Table> tables = from t in d.TableItems() select t;
-            return tables.ToList();
+            IEnumerable<Table> lst_t = from obj_t in d.TableItems() select obj_t;
+            return lst_t.ToList();
         }
     }
 }

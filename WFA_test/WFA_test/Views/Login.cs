@@ -18,38 +18,55 @@ namespace WFA_test.Views
             InitializeComponent();
         }
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        AccountController acc_ctrl = new AccountController();
+
+        private async void btn_Login_Click(object sender, EventArgs e)
         {
-            txt_UserName.Text = "admin";    txt_Password.Text = "admin";
-            UserController u_ctrl = new UserController();
+             txt_UserName.Text = "admin";    txt_Password.Text = "admin";
+            bool flag = true;
+            int time = 0;
+            String usrn = txt_UserName.Text;
+            String pwd = txt_Password.Text;
+
             errorLogin.Clear();
-            if (u_ctrl.Validate(txt_UserName.Text, txt_Password.Text))
+            if (txt_UserName.Text == "")
+            {
+                errorLogin.SetError(txt_UserName, "Username is empty.");
+                flag = false;
+            }
+            if (txt_Password.Text == "")
+            {
+                errorLogin.SetError(txt_Password, "Password is empty.");
+                flag = false;
+            }
+            if (flag)
             {
                 tss_lbl_statusLogin.Text = "Waiting...";
                 this.Cursor = Cursors.WaitCursor;
                 this.Enabled = false;
-                WaitSomeTime(2000);
-            }
-            else
-            {
-                tss_lbl_statusLogin.Text = "Login Failed.";
-                if (txt_UserName.Text == "")
-                    errorLogin.SetError(txt_UserName, "Username is empty.");
-                if (txt_Password.Text == "")
-                    errorLogin.SetError(txt_Password, "Password is empty.");
+                await Task.Delay(time);
+                tss_lbl_statusLogin.Text = acc_ctrl.Login(usrn, pwd);
+                if (tss_lbl_statusLogin.Text == "Login Successful.")
+                {
+                    String message = "Data is loading";
+                    tss_lbl_statusLogin.Text = message;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        tss_lbl_statusLogin.Text += ".";
+                        if (i == 3)
+                            tss_lbl_statusLogin.Text = message;
+                       // await Task.Delay(1000);
+                    }
+                    this.Hide();
+                    Main form_Main = new Main();
+                    form_Main.Show();
+                }
+                else
+                {
+                    this.Enabled = true;
+                }
             }
         }
-
-        public async void WaitSomeTime(int t)
-        {
-            await Task.Delay(t);
-            tss_lbl_statusLogin.Text = "Login Successful.";
-            await Task.Delay(t/2);
-            this.Hide();
-            Main fMain = new Main();
-            fMain.Show();
-        }
-
         private void txt_Password_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

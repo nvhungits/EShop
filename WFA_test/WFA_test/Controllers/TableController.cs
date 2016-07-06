@@ -13,7 +13,14 @@ namespace WFA_test.Controllers
 
         public IEnumerable<Table> getAll()
         {
-            return t.getAll();
+            try
+            {
+                return t.getAll();
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

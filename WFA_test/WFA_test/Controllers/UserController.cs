@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WFA_test.Models;
 
 namespace WFA_test.Controllers
@@ -10,9 +8,27 @@ namespace WFA_test.Controllers
     class UserController
     {
         User u = new User();
-        public bool Validate(String UserName, String Password)
+        public List<User> getAllUser()
         {
-            return u.validate(UserName,Password);
+            try
+            {
+                return u.getAllUser();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public int FindUserBy(String UserName, String Password)
+        {
+            try
+            {
+                return u.FindUserBy(UserName, Password);
+            }
+            catch
+            {
+                return 0;
+            }
         }
     }
 }
