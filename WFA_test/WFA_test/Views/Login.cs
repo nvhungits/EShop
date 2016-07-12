@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFA_test.Controllers;
+using WFA_test.Models;
+using WFA_test.Views.sysView;
 
 namespace WFA_test.Views
 {
@@ -20,52 +22,44 @@ namespace WFA_test.Views
 
         AccountController acc_ctrl = new AccountController();
 
-        private async void btn_Login_Click(object sender, EventArgs e)
+        private void btn_Login_Click(object sender, EventArgs e)
         {
-             txt_UserName.Text = "admin";    txt_Password.Text = "admin";
-            bool flag = true;
-            int time = 0;
+            if (txt_UserName.Text == "1"){ txt_UserName.Text = "admin"; txt_Password.Text = "admin"; }
             String usrn = txt_UserName.Text;
             String pwd = txt_Password.Text;
 
             errorLogin.Clear();
-            if (txt_UserName.Text == "")
+            if(usrn == "") errorLogin.SetError(txt_UserName, "Username is empty.");
+            if(pwd == "")   errorLogin.SetError(txt_Password, "Password is empty.");
+            if (usrn != "" && pwd != "")
             {
-                errorLogin.SetError(txt_UserName, "Username is empty.");
-                flag = false;
-            }
-            if (txt_Password.Text == "")
-            {
-                errorLogin.SetError(txt_Password, "Password is empty.");
-                flag = false;
-            }
-            if (flag)
-            {
-                tss_lbl_statusLogin.Text = "Waiting...";
-                this.Cursor = Cursors.WaitCursor;
-                this.Enabled = false;
-                await Task.Delay(time);
-                tss_lbl_statusLogin.Text = acc_ctrl.Login(usrn, pwd);
-                if (tss_lbl_statusLogin.Text == "Login Successful.")
+                User u = new User();
+                try
                 {
-                    String message = "Data is loading";
-                    tss_lbl_statusLogin.Text = message;
-                    for (int i = 0; i < 7; i++)
+                    u = acc_ctrl.Login(usrn, pwd);
+                    if (chkBox_role.Checked)
                     {
-                        tss_lbl_statusLogin.Text += ".";
-                        if (i == 3)
-                            tss_lbl_statusLogin.Text = message;
-                       // await Task.Delay(1000);
+                        if (u.Role == "admin")
+                        {
+                            this.Hide();
+                            sysMain form_sysMain = new sysMain();
+                            form_sysMain.Show();
+                        }
+                        else tss_lbl_statusLogin.Text = "Access Denid.";
                     }
-                    this.Hide();
-                    Main form_Main = new Main();
-                    form_Main.Show();
+                    else
+                    {
+                        this.Hide();
+                        Main form_main = new Main();
+                        form_main.Show();
+                    }
                 }
-                else
-                {
-                    this.Enabled = true;
+                catch(Exception ex) {
+                    tss_lbl_statusLogin.Text = "UserName or Password is Wrong.";
+                    System.Console.Write("User not found.\nError: "+ex.Message);
                 }
             }
+           
         }
         private void txt_Password_KeyDown(object sender, KeyEventArgs e)
         {

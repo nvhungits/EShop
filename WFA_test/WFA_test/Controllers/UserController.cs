@@ -19,16 +19,9 @@ namespace WFA_test.Controllers
                 return null;
             }
         }
-        public int FindUserBy(String UserName, String Password)
+        public User FindUserBy(String UserName, String Password)
         {
-            try
-            {
-                return u.FindUserBy(UserName, Password);
-            }
-            catch
-            {
-                return 0;
-            }
+           return u.FindUserBy(UserName, Password);
         }
     }
 }

@@ -13,9 +13,9 @@ namespace WFA_test.ServerToTest
         {
             List<User> Users = new List<User>();
 
-            Users.Add(new User("admin","admin",true));
-            Users.Add(new User("user", "user", true));
-            Users.Add(new User("guest", "123", false));
+            Users.Add(new User("admin","admin","admin", true));
+            Users.Add(new User("user", "user", "user", true));
+            Users.Add(new User("guest", "123", "", false));
 
             return Users.ToList();
         }

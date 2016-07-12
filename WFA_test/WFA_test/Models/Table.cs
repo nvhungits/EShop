@@ -7,11 +7,11 @@ using WFA_test.ServerToTest;
 
 namespace WFA_test.Models
 {
-    class Table
+    class Table:sysTable
     {
         Data d = new Data();
-
         public String TableName { set; get; }
+        public String Type { set; get; }
         public bool Active { set; get; }
         public Table()
         {

@@ -37,13 +37,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tss_lbl_statusLogin = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chkBox_role = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_UserName
             // 
-            this.txt_UserName.Location = new System.Drawing.Point(51, 42);
+            this.txt_UserName.Location = new System.Drawing.Point(51, 31);
             this.txt_UserName.Name = "txt_UserName";
             this.txt_UserName.Size = new System.Drawing.Size(180, 20);
             this.txt_UserName.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(51, 93);
+            this.txt_Password.Location = new System.Drawing.Point(51, 82);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(180, 20);
@@ -60,7 +61,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(51, 130);
+            this.btn_Login.Location = new System.Drawing.Point(51, 119);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(180, 40);
             this.btn_Login.TabIndex = 2;
@@ -71,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 26);
+            this.label1.Location = new System.Drawing.Point(47, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 3;
@@ -80,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 77);
+            this.label2.Location = new System.Drawing.Point(47, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 4;
@@ -106,11 +107,22 @@
             // 
             this.errorLogin.ContainerControl = this;
             // 
+            // chkBox_role
+            // 
+            this.chkBox_role.AutoSize = true;
+            this.chkBox_role.Location = new System.Drawing.Point(51, 161);
+            this.chkBox_role.Name = "chkBox_role";
+            this.chkBox_role.Size = new System.Drawing.Size(121, 17);
+            this.chkBox_role.TabIndex = 6;
+            this.chkBox_role.Text = "Use WindowSystem";
+            this.chkBox_role.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 221);
+            this.Controls.Add(this.chkBox_role);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -138,5 +150,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tss_lbl_statusLogin;
         private System.Windows.Forms.ErrorProvider errorLogin;
+        private System.Windows.Forms.CheckBox chkBox_role;
     }
 }

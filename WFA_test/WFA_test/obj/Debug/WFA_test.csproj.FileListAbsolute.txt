@@ -17,3 +17,4 @@ C:\Users\Administrator\Desktop\Project\trunk\WFA_test\WFA_test\obj\Debug\WFA_tes
 C:\Users\Administrator\Desktop\Project\trunk\WFA_test\WFA_test\obj\Debug\WFA_test.Views.Login.resources
 C:\Users\Administrator\Desktop\Project\trunk\WFA_test\WFA_test\obj\Debug\WFA_test.Views.Main.resources
 C:\Users\Administrator\Desktop\Project\trunk\WFA_test\WFA_test\obj\Debug\WFA_test.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Project\trunk\WFA_test\WFA_test\obj\Debug\WFA_test.Views.sysView.sysMain.resources

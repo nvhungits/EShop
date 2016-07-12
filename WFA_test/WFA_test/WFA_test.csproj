@@ -52,7 +52,10 @@
     <Compile Include="Controllers\TableController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\sysTable.cs" />
     <Compile Include="Models\Table.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
@@ -70,6 +73,12 @@
     <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\sysView\sysMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\sysView\sysMain.Designer.cs">
+      <DependentUpon>sysMain.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,12 +87,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\sysView\sysMain.resx">
+      <DependentUpon>sysMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +113,19 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\table10.jpg" />
+    <Content Include="Images\table9.jpg" />
+    <Content Include="Images\table8.jpg" />
+    <Content Include="Images\table7.jpg" />
+    <Content Include="Images\table6.jpg" />
+    <Content Include="Images\table5.jpg" />
+    <Content Include="Images\table4.jpg" />
+    <Content Include="Images\table3.jpg" />
+    <Content Include="Images\table2.jpg" />
+    <Content Include="Images\table1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
