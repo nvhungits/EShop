@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Standard Report", "Standard Report.rptproj", "{584A929D-C9ED-4F68-88E8-39FDE4E52224}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.Debug|Default.ActiveCfg = Debug
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.Debug|Default.Build.0 = DebugLocal
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.Debug|Default.Deploy.0 = DebugLocal
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.DebugLocal|Default.Build.0 = DebugLocal
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.Production|Default.ActiveCfg = Production
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.Production|Default.Build.0 = Production
+		{584A929D-C9ED-4F68-88E8-39FDE4E52224}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,114 @@
+td.toprightbanner
+{
+	background-position:right;
+	font: 10pt Tahoma;
+}
+p.common
+{
+	font: bold 10pt Tahoma;
+}
+
+a.link:hover
+{
+	font: bold 10pt Tahoma;
+	text-decoration: none;
+	color: Cyan;
+}
+a.link:link
+{
+	font: bold 10pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+a.link:visited
+{
+	font: bold 10pt Tahoma;
+	text-decoration:none;
+}
+/*Top right link*/
+a.top:hover
+{
+	font: bold 8pt Tahoma;
+	text-decoration: none;
+	color: orange;
+}
+a.top:link
+{
+	font: bold 8pt Tahoma;
+	text-decoration: none;
+	color: #0A2840;
+}
+a.top:visited
+{
+	font: bold 8pt Tahoma;
+	text-decoration:none;	
+	color: #0A2840;
+}
+/*end*/
+
+a.pghome:link
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+a.pghome:hover
+{
+	font: bold 9pt Tahoma;
+	color: #FF9F40;
+	text-decoration: none;
+}
+a.pghome:visited
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+
+td.menu
+{
+	font: bold 10pt Tahoma;
+	color: White;
+}
+.text
+{
+	font: bold 10pt Tahoma;
+	color: #303030;
+}
+
+a.grid:link
+{
+	font: bold 10pt Tahoma;
+	color:Olive;
+	text-decoration: none;
+}
+a.grid:hover
+{
+	font: bold 10pt Tahoma;
+	color:Lime;
+	text-decoration: none;
+}
+a.grid:visited
+{
+	font: bold 10pt Tahoma;
+	color:Olive;
+	text-decoration: none;
+}
+.text
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+.position
+{
+	top: 62px;
+	left: 784px;
+}
+.idcolor
+{
+	color: white;
+}
+.commonbutton
+{
+	font: bold 10px Tahoma;
+}

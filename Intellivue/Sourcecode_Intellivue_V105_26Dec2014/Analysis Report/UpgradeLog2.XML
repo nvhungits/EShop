@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ReportingService">
+</Property><Property Name="Solution File" Value="D:\working\Intellivue\Frontend_Intellivue\Sourcecode_Intellivue_V104_11Dec2014_v2013\Analysis Report\ReportingService.sln">
+</Property><Property Name="Date" Value="26 Tháng Mười Hai 2014">
+</Property><Property Name="Time" Value="11:32 SA">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ReportingService.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ReportingService.sln" Description="Converted">
+</Event></UpgradeLog>

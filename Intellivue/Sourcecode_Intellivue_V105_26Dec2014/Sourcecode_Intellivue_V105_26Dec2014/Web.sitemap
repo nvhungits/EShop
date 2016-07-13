@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Interfaces/pgHomePage.aspx" title="Home"  description="">
+        <siteMapNode url="" title="Analysis Services"  description="">
+
+            <siteMapNode url="~/Interfaces/AnalysisService/AdviserWeek.aspx" title="Adviser By Product Week"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/AnalysisService/AdviserMonth.aspx" title="Adviser By Product Month"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/AnalysisService/FumByProductByDate.aspx" title="FUM By Product By Date"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/AnalysisService/FumByDateByProduct.aspx" title="FUM By Date By Product"  description="">
+            </siteMapNode>
+
+        </siteMapNode>
+        <siteMapNode url="" title="Reporting Services"  description="">
+
+            <siteMapNode url="~/Interfaces/StandardReports/AdviserFumReport.aspx" title="Adviser Funding FUM"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/AdviserInflowReport.aspx" title="Adviser Funding Inflow"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/AdviserNetflowReport.aspx" title="Adviser Funding Netflow"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/AdviserOutflowReport.aspx" title="Adviser Funding Outflow"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/FumReport.aspx" title="Funds Under Management"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/FundsFlowByAccountReport.aspx" title="Funds Flow By Account"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/FundsFlowByProduct.aspx" title="Funds Flow By Product"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/InvestmentOptionTransactionReport.aspx" title="Inv Option Transaction"  description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/StandardReports/InvestorSummary.aspx" title="Investor Summary"  description="">
+            </siteMapNode>
+
+        </siteMapNode>
+        <siteMapNode url="" title="Dashboard" description="">
+            <siteMapNode url="~/Interfaces/Dashboard/DasboardMng/dashboardmng.aspx" title="Dashboard Management" description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/Dashboard/DashboardDefaultViewer.aspx" title="Dashboard Default Viewer" description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/Dashboard/DasboardMng/DashboardViewer.aspx" title="Dashboard Viewer" description="">
+            </siteMapNode>
+        </siteMapNode>
+
+        <siteMapNode url="~/Interfaces/Administrator/UserMaintenance.aspx" title="User List" description="">
+            <siteMapNode url="~/Interfaces/Administrator/pgUserReportRight.aspx" title="User Detail" description="">
+            </siteMapNode>
+        </siteMapNode>
+
+
+        <siteMapNode url="" title="Cube"  description="">
+            <siteMapNode url="~/Interfaces/CubeBrowser/CubeBrowse.aspx" title="Cube Management" description="">
+            </siteMapNode>
+            <siteMapNode url="~/Interfaces/CubeBrowser/CubeViewer.aspx" title="Cube Viewer" description="">
+            </siteMapNode>
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f927307ad6b4e1993b4cc7978b7ab30" Name="Diagram1" ZoomLevel="50" ShowGrid="true">
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.TblAccountInvOpt" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblAdviser" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblAuthorization" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblCustomer" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblProduct" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblProductPrice" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblReport" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblRole" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblTransaction" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblUser" Width="1.5" PointX="3" PointY="1" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblAccount" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblCode" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblCountryPostCode" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblCubeManagement" Width="1.5" PointX="13.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblCustomerAccount" Width="1.5" PointX="13.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Admin_MVC5Bootstrap_Intellivue.tblProductTotal" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="false" />
+        <AssociationConnector Association="Admin_MVC5Bootstrap_Intellivue.FK_tblUser_tblRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

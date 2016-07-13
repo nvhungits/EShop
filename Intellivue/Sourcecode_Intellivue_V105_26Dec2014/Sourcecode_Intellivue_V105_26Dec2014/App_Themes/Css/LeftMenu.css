@@ -1,0 +1,68 @@
+﻿body {
+}
+
+.box_rotate
+{
+    writing-mode:tb-rl;
+	-webkit-transform:rotate(90deg); /* can be -90, 180, ... */
+	-moz-transform:rotate(90deg); /* can be -90, 180, ... */
+	-o-transform: rotate(90deg); /* can be -90, 180, ... */
+	white-space:nowrap;
+	display:block;
+	width:20px; /* when set to other like -90, 180 must set to other */
+	height:20px; /* when set to other like -90, 180 must set to other */
+	font:600 11px Arial;
+	color:#111111;
+	text-transform:uppercase;
+}
+
+.menuClick
+{
+    cursor:pointer;
+    color:#111111;
+}
+
+.splitMenuCaps
+{
+    font-weight:600;
+    color:#8D8D8D;
+}
+
+#panel1, #panel2, #panel3, #panel4 {margin-left: -220px;}
+#colleft1, #colleft2, #colleft3, #colleft4 { width:0px; float:left; overflow:hidden;}
+#colleft2 {margin-top:130px;}
+#colleft3 {margin-top:265px;}
+#colleft4 {margin-top:352px;}
+#colleft1 #hidePanel1, #colleft2 #hidePanel2, #colleft3 #hidePanel3, #colleft4 #hidePanel4 {margin-left:120px;margin-bottom:10px;}
+#colleft1 #hidePanel1 a, #colleft2 #hidePanel2 a, #colleft3 #hidePanel3 a, #colleft4 #hidePanel4 a {font:12px Trebuchet MS, Verdana, sans-serif;color:#FFFFFF;text-decoration:none;}
+#colleft1 #hidePanel1 a:hover, #colleft2 #hidePanel2 a:hover, #colleft3 #hidePanel3 a:hover, #colleft4 #hidePanel4 a:hover {font:12px Trebuchet MS, Verdana, sans-serif;color:#999999;text-decoration:none;}
+
+#showPanel { position:inherit; z-index:2; left:0; float:left; display:block; width:28px; height:540px; background: #C6D9C9; border-right:1px solid #FFFFFF;}
+#showPanel span{display:block; margin-top:10px; margin-left:2px;}
+
+/* Left menu container */
+.leftMenuCaption
+{
+    font:600 12px Trebuchet MS, Verdana, sans-serif;
+    color: #000000;
+    text-transform:uppercase;
+}
+.leftMenuBody
+{
+    background:#666666;
+}
+.subLink
+{
+    padding-left:15px;
+    font:12px Trebuchet MS, Verdana, sans-serif;
+    color: #FFFFFF;
+    text-decoration:none;
+}
+.splitLinks
+{
+    float:right;
+    width:212px;
+    height:1px;
+    font-size:0px;
+    border-bottom:1px solid #999999;
+}

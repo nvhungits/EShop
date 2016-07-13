@@ -1,0 +1,586 @@
+td.toprightbanner
+{
+	background-position:right;
+	font: 10pt Tahoma;
+}
+p.common
+{
+	font: bold 10pt Tahoma;
+}
+
+a.link:hover
+{
+	font: bold 10pt Tahoma;
+	text-decoration: none;
+	color: Cyan;
+}
+a.link:link
+{
+	font: bold 10pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+a.link:visited
+{
+	font: bold 10pt Tahoma;
+	text-decoration:none;
+}
+/*Top right link*/
+a.top:hover
+{
+	font: bold 8pt Tahoma;
+	text-decoration: none;
+	color: orange;
+}
+a.top:link
+{
+	font: bold 8pt Tahoma;
+	text-decoration: none;
+	color: #0A2840;
+}
+a.top:visited
+{
+	font: bold 8pt Tahoma;
+	text-decoration:none;	
+	color: #0A2840;
+}
+/*end*/
+
+a.pghome:link
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+a.pghome:hover
+{
+	font: bold 9pt Tahoma;
+	color: #FF9F40;
+	text-decoration: none;
+}
+a.pghome:visited
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+
+td.menu
+{
+	font: bold 10pt Tahoma;
+	color: White;
+}
+.text
+{
+	font: bold 10pt Tahoma;
+	color: #303030;
+}
+
+a.grid:link
+{
+	font: bold 10pt Tahoma;
+	color:Olive;
+	text-decoration: none;
+}
+a.grid:hover
+{
+	font: bold 10pt Tahoma;
+	color:Lime;
+	text-decoration: none;
+}
+a.grid:visited
+{
+	font: bold 10pt Tahoma;
+	color:Olive;
+	text-decoration: none;
+}
+.text
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+.position
+{
+	top: 62px;
+	left: 784px;
+}
+.idcolor
+{
+	color: white;
+}
+.commonbutton
+{
+	font: bold 10px Tahoma;
+}
+
+td.toprightbanner
+{
+	background-position:right;
+	font: 10pt Tahoma;
+}
+p.common
+{
+	font: bold 10pt Tahoma;
+}
+
+a.link:hover
+{
+	font: bold 10pt Tahoma;
+	text-decoration: none;
+	color: Gray;
+}
+a.link:link
+{
+	font: bold 10pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+a.link:visited
+{
+	font: bold 10pt Tahoma;
+	text-decoration:none;
+}
+/*Top right link*/
+a.top:hover
+{
+	font: bold 8pt Tahoma;
+	text-decoration: none;
+	color: orange;
+}
+a.top:link
+{
+	font: bold 8pt Tahoma;
+	text-decoration: none;
+	color: #0A2840;
+}
+a.top:visited
+{
+	font: bold 8pt Tahoma;
+	text-decoration:none;	
+	color: #0A2840;
+}
+/*end*/
+
+a.pghome:link
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+a.pghome:hover
+{
+	font: bold 9pt Tahoma;
+	color: #FF9F40;
+	text-decoration: none;
+}
+a.pghome:visited
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+
+td.menu
+{
+	font: bold 10pt Tahoma;
+	color: White;
+}
+.text
+{
+	font: bold 10pt Tahoma;
+	color: #303030;
+}
+
+a.grid:link
+{
+	font: bold 10pt Tahoma;
+	color:Olive;
+	text-decoration: none;
+}
+a.grid:hover
+{
+	font: bold 10pt Tahoma;
+	color:Lime;
+	text-decoration: none;
+}
+a.grid:visited
+{
+	font: bold 10pt Tahoma;
+	color:Olive;
+	text-decoration: none;
+}
+.text
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+.position
+{
+	top: 62px;
+	left: 784px;
+}
+.idcolor
+{
+	color: white;
+}
+.commonbutton
+{
+	font: bold 10px Tahoma;
+}
+
+.page_heading
+{
+    width:100%;
+    text-align:center;
+    color:#5f9ea0;
+    font-weight:bold;
+    font-size:20px;
+    margin:20px 0px;
+    text-transform:uppercase;
+}
+.search_criteria_bar
+{
+    background-color:#a1c3b1;
+    /*padding: 10px 0px 10px 10px;*/
+    border-bottom: 2px solid #758e81;
+    padding:10px;
+}
+.search_criteria_leftcolumn
+{
+    float:left;
+    font-weight:bold;
+    width:100%;
+}
+.search_criteria_rightcolumn
+{
+    float:right;
+    
+}
+.search_criteria_firstcolumn
+{
+    float:left;
+    width:50%;
+}
+.search_criteria_firstcolumn span, .search_criteria_firstcolumn div, .search_criteria_secondcolumn span, .search_criteria_secondcolumn div
+{
+    float:left;
+    padding:0px 5px;
+}
+.search_criteria_firstcolumn span,.search_criteria_secondcolumn span
+{
+    line-height:19px;
+}
+.search_criteria_secondcolumn
+{
+    float:left;
+    width:50%;
+}
+.page_navigation
+{
+    background-color:#a1c3b1;
+    color:#58727b;
+    font-size:12px;
+    font-weight:bold;
+    padding: 10px ;
+    text-align:left;
+    border-bottom: 2px solid #758e81;
+    border-top:2px solid #758e81;
+    
+}
+.page_navigation a
+{
+    color:#58727b;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* CSS for Cube Browse page*/
+
+.dxpgColumnArea
+{
+    display:none;
+}
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1
+{
+    border-left:none;
+    border-right:none;
+}
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_ACCFilterArea
+{
+    background-color:#a1c3b1;
+}
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_MT tr:first-child td
+{
+    background-color:#a1c3b1;
+    color:#445c6c;
+    font-weight:bold;
+}
+
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_DataArea tr:first-child td,#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_ACCDataArea
+{
+    background-color:#b8e0d7;
+    color:#6ba7a7;
+}
+
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_MT tr:nth-child(2) 
+{
+    background-color:Red;
+}
+
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_ACCRowArea td
+{
+    background-color:#a1c3b1;
+}
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_ACCRowArea .dxpgColumnFieldValue
+{
+    display:none;
+}
+.dxpgHeader ,#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_DataArea table,.dxpgHeader 
+{
+    border:none !important;
+}
+
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_FilterArea td,#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_ACCDataArea td
+{
+    border-right:1px solid #5f9ea0;
+}
+
+#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_FilterArea td:last-child,#ctl00_ContentPlaceHolder1_ASPxPivotGrid1_ACCDataArea td:last-child
+{
+    border-right:none;
+}
+
+/* CSS for Authorization page: User List */
+
+#actable thead:first-child td
+{
+    border-top:3px solid #5f9ea0;
+    background:#ebebeb;
+    border-right:1px solid #5f9ea0;
+    text-align: center;
+    color:#5f9ea0;
+    font-size:14;
+    font-weight:bold;
+    padding: 7px 0px;
+}
+#actable thead:first-child td:last-child
+{
+    border-right:none;
+}
+
+#actable tbody tr:nth-child(2n+1)
+{
+    background-color:#b8e0d7;
+}
+
+#actable tbody tr
+{
+    padding: 5px 0px;
+    text-align:right;
+}
+#actable tbody tr td
+{
+    padding:2px 5px 2px;
+    font-weight:bold;
+}
+
+.actable tr:first-child th
+{
+    border-top:3px solid #5f9ea0;
+    background:#ebebeb;
+    border-right:1px solid #5f9ea0;
+    text-align: center;
+    color:#5f9ea0;
+    font-size:14;
+    font-weight:bold;
+    padding: 7px 0px;
+}
+.actable tr:first-child th:last-child
+{
+    border-right:none;
+}
+
+.actable tbody tr:nth-child(2n+1)
+{
+    background-color:#b8e0d7;
+}
+
+.actable tbody tr
+{
+    padding: 5px 0px;
+    text-align:right;
+}
+.actable tbody tr td
+{
+    padding:2px 5px 2px;
+    font-weight:bold;
+}
+
+.actable tr td, .actable tr, .actable, .actable th
+{
+    border-left: medium none;
+    border-right: medium none;
+}
+
+
+
+.new_button
+{
+    background-color:#bae0d8;
+    background-image: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 51%);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    height:26px;
+    border:1px solid #5f9ea0;
+    font-weight: bold;
+    color:#4e6772;
+    width:100px;
+    text-align:center;
+}
+
+#profile_left input[type="text"]
+{
+    border: 1px solid #5f9ea0;
+}
+#profile_left td
+{
+    font-weight:bold;
+}
+.roleuser tbody tr:first-child td{
+    border-top: 1px solid white;
+    
+}
+.roleuser thead tr td
+{
+    color:#5f9ea0;
+    font-weight:bold;
+    font-size:14px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.roleuser tbody tr td
+{
+   
+    font-weight:bold;
+    font-size:12px;
+    padding-left:15px;
+    padding-right:15px;
+    text-align:right;
+}
+
+.roleuser tr
+{
+    background-color:#bae0d8;
+}
+.roleuser
+{
+    width:100%;
+}
+.AccessRight
+{
+    margin-bottom:10px;
+}
+
+.ar_header img
+{
+    
+    position:absolute;
+    left:20px;
+}
+.AccessRight .ar_content
+{
+	display:none;
+	
+}
+.AccessRight .ar_header
+{
+	background-color:#a1c3b1;
+	padding:2px;
+	cursor:pointer;
+	font-weight:bold;
+	text-align:center;
+	color:#4e6772;
+	position:relative;
+}
+.test
+{
+    border:none;
+}
+
+/* CSS for Dashboard Management*/
+
+#divAddWidget
+{
+    text-align:center;
+    
+    
+}
+#divAddWidget a
+{
+    color:#658185;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+.easyMenuItemLeftRoundCornerCellOver,.easyMenuItemContentCellOver,.easyMenuItemRightRoundCornerCellOver
+{
+    /*background-color:#b8e0d7;
+    background-image:none !important;
+   */
+}
+
+.itemText
+{
+    color:#83b8b6;
+    font-weight:bold;
+}
+
+
+.color_table tr td,.color_table tr,.color_table,.color_table th
+{
+    border-left:none;
+    border-right:none;
+    
+}
+.color_table tr td
+{
+    padding:8px 4px;
+    
+}
+.color_table th
+{
+    border-top: 2px solid #5f9ea0;
+    padding: 10px 0px;
+}
+
+.color_table th:first-child
+{
+    border-right: 1px solid #5f9ea0;
+}
+
+
+.color_table thead tr:first-child
+{
+    background-color:#ebebeb;
+}
+
+.test td
+{
+    background:white;
+}
+.table_char_left
+{
+    text-align:left;
+}
+.table_char_right
+{
+    text-align:right;
+}
+
+.dashboard_table_text tr td:first-child
+{
+    text-align:left;
+}

@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6DB2426-EFE3-424F-A4D2-5060B6148911}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sourcecode_Intellivue</RootNamespace>
+    <AssemblyName>Sourcecode_Intellivue</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\DevExpress.Web.v12.2\12.2.7.0__b88d1754d700e49a\DevExpress.Web.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="obout_ASPTreeView_2_NET, Version=2.0.38.0, Culture=neutral, PublicKeyToken=6fd96a95fc486c7d, processorArchitecture=MSIL" />
+    <Reference Include="obout_EasyMenu_Pro, Version=3.10.2.1, Culture=neutral, PublicKeyToken=b76d93635057b0c1, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="UserControls\wcLeftMenu.ascx" />
+    <Content Include="Web.huy.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Administrator\pgChangePassword.aspx.cs">
+      <DependentUpon>pgChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Administrator\pgChangePassword.aspx.designer.cs">
+      <DependentUpon>pgChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Administrator\pgUserReportRight.aspx.cs">
+      <DependentUpon>pgUserReportRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Administrator\pgUserReportRight.aspx.designer.cs">
+      <DependentUpon>pgUserReportRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Administrator\UserMaintenance.aspx.cs">
+      <DependentUpon>UserMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Administrator\UserMaintenance.aspx.designer.cs">
+      <DependentUpon>UserMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\AdviserMonth.aspx.cs">
+      <DependentUpon>AdviserMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\AdviserMonth.aspx.designer.cs">
+      <DependentUpon>AdviserMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\AdviserWeek.aspx.cs">
+      <DependentUpon>AdviserWeek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\AdviserWeek.aspx.designer.cs">
+      <DependentUpon>AdviserWeek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\FumByDateByProduct.aspx.cs">
+      <DependentUpon>FumByDateByProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\FumByDateByProduct.aspx.designer.cs">
+      <DependentUpon>FumByDateByProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\FumByProductByDate.aspx.cs">
+      <DependentUpon>FumByProductByDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\FumByProductByDate.aspx.designer.cs">
+      <DependentUpon>FumByProductByDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\ReportPage.aspx.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\AnalysisService\ReportPage.aspx.designer.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\CubeBrowser\CubeBrowse.aspx.cs">
+      <DependentUpon>CubeBrowse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\CubeBrowser\CubeBrowse.aspx.designer.cs">
+      <DependentUpon>CubeBrowse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\CubeBrowser\CubeViewer.aspx.cs">
+      <DependentUpon>CubeViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\CubeBrowser\CubeViewer.aspx.designer.cs">
+      <DependentUpon>CubeViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardMng.aspx.cs">
+      <DependentUpon>DashboardMng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardMng.aspx.designer.cs">
+      <DependentUpon>DashboardMng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewer.aspx.cs">
+      <DependentUpon>DashboardViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewer.aspx.designer.cs">
+      <DependentUpon>DashboardViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewerFour.aspx.cs">
+      <DependentUpon>DashboardViewerFour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewerFour.aspx.designer.cs">
+      <DependentUpon>DashboardViewerFour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewerSecond.aspx.cs">
+      <DependentUpon>DashboardViewerSecond.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewerSecond.aspx.designer.cs">
+      <DependentUpon>DashboardViewerSecond.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewerThird.aspx.cs">
+      <DependentUpon>DashboardViewerThird.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DasboardMng\DashboardViewerThird.aspx.designer.cs">
+      <DependentUpon>DashboardViewerThird.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DashboardDefaultViewer.aspx.cs">
+      <DependentUpon>DashboardDefaultViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\DashboardDefaultViewer.aspx.designer.cs">
+      <DependentUpon>DashboardDefaultViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\pgViewDashboard.aspx.cs">
+      <DependentUpon>pgViewDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Dashboard\pgViewDashboard.aspx.designer.cs">
+      <DependentUpon>pgViewDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\pgAdministration.aspx.cs">
+      <DependentUpon>pgAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\pgAdministration.aspx.designer.cs">
+      <DependentUpon>pgAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\pgHomePage.aspx.cs">
+      <DependentUpon>pgHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\pgHomePage.aspx.designer.cs">
+      <DependentUpon>pgHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\pgTemp.aspx.cs">
+      <DependentUpon>pgTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\pgTemp.aspx.designer.cs">
+      <DependentUpon>pgTemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\pgUnderConstruction.aspx.cs">
+      <DependentUpon>pgUnderConstruction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\pgUnderConstruction.aspx.designer.cs">
+      <DependentUpon>pgUnderConstruction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserFumReport.aspx.cs">
+      <DependentUpon>AdviserFumReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserFumReport.aspx.designer.cs">
+      <DependentUpon>AdviserFumReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserInflowReport.aspx.cs">
+      <DependentUpon>AdviserInflowReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserInflowReport.aspx.designer.cs">
+      <DependentUpon>AdviserInflowReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserNetflowReport.aspx.cs">
+      <DependentUpon>AdviserNetflowReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserNetflowReport.aspx.designer.cs">
+      <DependentUpon>AdviserNetflowReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserOutflowReport.aspx.cs">
+      <DependentUpon>AdviserOutflowReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\AdviserOutflowReport.aspx.designer.cs">
+      <DependentUpon>AdviserOutflowReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\FumReport.aspx.cs">
+      <DependentUpon>FumReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\FumReport.aspx.designer.cs">
+      <DependentUpon>FumReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\FundsFlowByAccountReport.aspx.cs">
+      <DependentUpon>FundsFlowByAccountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\FundsFlowByAccountReport.aspx.designer.cs">
+      <DependentUpon>FundsFlowByAccountReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\FundsFlowByProduct.aspx.cs">
+      <DependentUpon>FundsFlowByProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\FundsFlowByProduct.aspx.designer.cs">
+      <DependentUpon>FundsFlowByProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\InvestmentOptionTransactionReport.aspx.cs">
+      <DependentUpon>InvestmentOptionTransactionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\InvestmentOptionTransactionReport.aspx.designer.cs">
+      <DependentUpon>InvestmentOptionTransactionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\InvestorSummary.aspx.cs">
+      <DependentUpon>InvestorSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\InvestorSummary.aspx.designer.cs">
+      <DependentUpon>InvestorSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\ReportPage.aspx.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces\StandardReports\ReportPage.aspx.designer.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CoreClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\clsConnection.cs" />
+    <Compile Include="lib\DatabaseClass.cs" />
+    <Compile Include="lib\GlobalClass.cs" />
+    <Compile Include="lib\OLAPClass.cs" />
+    <Compile Include="lib\ValidationClass.cs" />
+    <Compile Include="MasterPage\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\wcLogout.ascx.cs">
+      <DependentUpon>wcLogout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\wcLogout.ascx.designer.cs">
+      <DependentUpon>wcLogout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\wcTopMenu.ascx.cs">
+      <DependentUpon>wcTopMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\wcTopMenu.ascx.designer.cs">
+      <DependentUpon>wcTopMenu.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Interfaces\CubeBrowser\CubeBrowse.aspx" />
+    <Content Include="Interfaces\CubeBrowser\CubeViewer.aspx" />
+    <Content Include="Interfaces\pgHomePage.aspx" />
+    <Content Include="MasterPage\Default.Master" />
+    <Content Include="UserControls\wcLogout.ascx" />
+    <Content Include="UserControls\wcTopMenu.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Css\DatePicker.css" />
+    <Content Include="App_Themes\Css\Default.css" />
+    <Content Include="App_Themes\Css\LeftMenu.css" />
+    <Content Include="App_Themes\Css\NewStyle.css" />
+    <Content Include="App_Themes\Css\style.css" />
+    <Content Include="App_Themes\Css\TabStrip1\roundcorner_left.gif" />
+    <Content Include="App_Themes\Css\TabStrip1\roundcorner_left_over.gif" />
+    <Content Include="App_Themes\Css\TabStrip1\roundcorner_mid.gif" />
+    <Content Include="App_Themes\Css\TabStrip1\roundcorner_mid_over.gif" />
+    <Content Include="App_Themes\Css\TabStrip1\roundcorner_right.gif" />
+    <Content Include="App_Themes\Css\TabStrip1\roundcorner_right_over.gif" />
+    <Content Include="App_Themes\Css\TabStrip1\style.css" />
+    <Content Include="App_Themes\Css\TabStrip1\submenu.gif" />
+    <Content Include="Interfaces\AnalysisService\AdviserWeek.aspx" />
+    <Content Include="Interfaces\AnalysisService\ReportPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Css\dashboardmng.css" />
+    <Content Include="Images\Admin_Big.gif" />
+    <Content Include="Images\Admin_Big.jpg" />
+    <Content Include="Images\Admin_Icon.jpg" />
+    <Content Include="Images\admin_icon_s.gif" />
+    <Content Include="Images\AlertIcon\icon1.jpg" />
+    <Content Include="Images\AlertIcon\icon2.jpg" />
+    <Content Include="Images\AlertIcon\icon3.jpg" />
+    <Content Include="Images\AlertIcon\icon4.jpg" />
+    <Content Include="Images\analysis_icon_s.gif" />
+    <Content Include="Images\banner_center.gif" />
+    <Content Include="Images\bgConfig.gif" />
+    <Content Include="Images\bg_top_menu.gif" />
+    <Content Include="Images\bg_top_menu_bk.gif" />
+    <Content Include="Images\Big_Dashboard.gif" />
+    <Content Include="Images\Big_Dashboard.jpg" />
+    <Content Include="Images\BI_Icon.jpg" />
+    <Content Include="Images\button.jpg" />
+    <Content Include="Images\b_admin.gif" />
+    <Content Include="Images\b_admin_bk.gif" />
+    <Content Include="Images\b_analysis.gif" />
+    <Content Include="Images\b_cube.jpg" />
+    <Content Include="Images\b_dash.gif" />
+    <Content Include="Images\b_dash_bk.gif" />
+    <Content Include="Images\b_home.gif" />
+    <Content Include="Images\b_logout.gif" />
+    <Content Include="Images\b_logout_bk.gif" />
+    <Content Include="Images\b_report.gif" />
+    <Content Include="Images\cmdAdd.jpg" />
+    <Content Include="Images\cmdApply.jpg" />
+    <Content Include="Images\cmdBG.jpg" />
+    <Content Include="Images\cmdCancel.jpg" />
+    <Content Include="Images\cmdCreate.jpg" />
+    <Content Include="Images\cmdDelete.jpg" />
+    <Content Include="Images\cmdEdit.jpg" />
+    <Content Include="Images\cmdLogin.jpg" />
+    <Content Include="Images\cmdPreview.jpg" />
+    <Content Include="Images\cmdSave.jpg" />
+    <Content Include="Images\cmdUpdate.jpg" />
+    <Content Include="Images\Color_Administration.gif" />
+    <Content Include="Images\Color_AlertConfig.jpg" />
+    <Content Include="Images\Color_BIUser.gif" />
+    <Content Include="Images\Color_CustomzeReport.jpg" />
+    <Content Include="Images\Color_Dashboard.gif" />
+    <Content Include="Images\Color_KPI.gif" />
+    <Content Include="Images\Color_Logout.gif" />
+    <Content Include="Images\Color_Logout1.gif" />
+    <Content Include="Images\Color_ManageDashboard.jpg" />
+    <Content Include="Images\Color_MDWP.jpg" />
+    <Content Include="Images\Color_Report.gif" />
+    <Content Include="Images\Copy of Logout_Icon.jpg" />
+    <Content Include="Images\Copyright.jpg" />
+    <Content Include="Images\Dashboard_Icon.jpg" />
+    <Content Include="Images\Dashboard_Icon_s.gif" />
+    <Content Include="Images\Datetime.gif" />
+    <Content Include="Images\DeleteR.gif" />
+    <Content Include="Images\DragonCapital\collapse_icon.png" />
+    <Content Include="Images\DragonCapital\csv-icon.png" />
+    <Content Include="Images\DragonCapital\edit.png" />
+    <Content Include="Images\DragonCapital\edit_icon.png" />
+    <Content Include="Images\DragonCapital\email-icon.png" />
+    <Content Include="Images\DragonCapital\excel-icon.png" />
+    <Content Include="Images\DragonCapital\expand_icon.png" />
+    <Content Include="Images\DragonCapital\horizontal_separation_line.png" />
+    <Content Include="Images\DragonCapital\pdf-icon.png" />
+    <Content Include="Images\DragonCapital\printer-icon.png" />
+    <Content Include="Images\DragonCapital\tb-check.png" />
+    <Content Include="Images\DragonCapital\tick_icon.png" />
+    <Content Include="Images\DragonCapital\tiff-icon.png" />
+    <Content Include="Images\DragonCapital\web-achieve-icon.png" />
+    <Content Include="Images\DragonCapital\web-app-icon.png" />
+    <Content Include="Images\EditR.gif" />
+    <Content Include="Images\fence.jpg" />
+    <Content Include="Images\Gray_Administration.gif" />
+    <Content Include="Images\Gray_AlertConfig.jpg" />
+    <Content Include="Images\Gray_BIUSER.gif" />
+    <Content Include="Images\Gray_CustomizeReport.jpg" />
+    <Content Include="Images\Gray_Dashboard.gif" />
+    <Content Include="Images\Gray_KPI.gif" />
+    <Content Include="Images\Gray_Logout.gif" />
+    <Content Include="Images\Gray_ManageDashboard.jpg" />
+    <Content Include="Images\Gray_MDWP.jpg" />
+    <Content Include="Images\Gray_Report.gif" />
+    <Content Include="Images\greaterArrow.jpg" />
+    <Content Include="Images\Home_02.gif" />
+    <Content Include="Images\Home_04.jpg" />
+    <Content Include="Images\Home_07.gif" />
+    <Content Include="Images\Home_10.gif" />
+    <Content Include="Images\icon1.gif" />
+    <Content Include="Images\icon2.gif" />
+    <Content Include="Images\icon3.gif" />
+    <Content Include="Images\icon_web\back.png" />
+    <Content Include="Images\icon_web\create_dashboard.png" />
+    <Content Include="Images\icon_web\create_user.png" />
+    <Content Include="Images\icon_web\draw_dashboard.png" />
+    <Content Include="Images\icon_web\export_cube.png" />
+    <Content Include="Images\icon_web\load_cube.png" />
+    <Content Include="Images\icon_web\open_report_cube.png" />
+    <Content Include="Images\icon_web\save_cube.png" />
+    <Content Include="Images\icon_web\save_dashboard.png" />
+    <Content Include="Images\icon_web\submit_user.png" />
+    <Content Include="Images\icon_web\view_report.png" />
+    <Content Include="Images\IntelliVueLogo.jpg" />
+    <Content Include="Images\lessArrow.jpg" />
+    <Content Include="Images\Login01.gif" />
+    <Content Include="Images\Login02.gif" />
+    <Content Include="Images\Login03.gif" />
+    <Content Include="Images\Login04.gif" />
+    <Content Include="Images\Login05.gif" />
+    <Content Include="Images\Login06.gif" />
+    <Content Include="Images\Login07.gif" />
+    <Content Include="Images\Login08.gif" />
+    <Content Include="Images\Login09.gif" />
+    <Content Include="Images\Login10.gif" />
+    <Content Include="Images\Login11.jpg" />
+    <Content Include="Images\Login12.gif" />
+    <Content Include="Images\Login13.gif" />
+    <Content Include="Images\logout.gif" />
+    <Content Include="Images\Logout.jpg" />
+    <Content Include="Images\Logout_Icon.jpg" />
+    <Content Include="Images\Logout_Icon1.jpg" />
+    <Content Include="Images\Logout_Icon2.jpg" />
+    <Content Include="Images\MainBackground.jpg" />
+    <Content Include="Images\MiddleBanner.jpg" />
+    <Content Include="Images\MiddleBottom.jpg" />
+    <Content Include="Images\newActionIco\Delete.GIF" />
+    <Content Include="Images\newActionIco\Delete.ico" />
+    <Content Include="Images\newActionIco\Search.GIF" />
+    <Content Include="Images\newActionIco\Search.ico" />
+    <Content Include="Images\newActionIco\Update.ico" />
+    <Content Include="Images\newActionIco\_Search.GIF" />
+    <Content Include="Images\newActionIco\_Search.ico" />
+    <Content Include="Images\PenLogo.jpg" />
+    <Content Include="Images\plus.jpg" />
+    <Content Include="Images\Reporting_Icon.jpg" />
+    <Content Include="Images\report_icon_s.gif" />
+    <Content Include="Images\RightBottom.jpg" />
+    <Content Include="Images\SearchR.gif" />
+    <Content Include="Images\Smaller_Analysis.gif" />
+    <Content Include="Images\Smaller_Reporting.gif" />
+    <Content Include="Images\Small_Admin.jpg" />
+    <Content Include="Images\Small_Analysis.gif" />
+    <Content Include="Images\Small_Dashboard.jpg" />
+    <Content Include="Images\Small_Home.gif" />
+    <Content Include="Images\Small_Reporting.gif" />
+    <Content Include="Images\Toprightbanner.jpg" />
+    <Content Include="Images\TranLogo.jpg" />
+    <Content Include="Images\Vista_01.gif" />
+    <Content Include="Images\Vista_02.gif" />
+    <Content Include="Images\Vista_03.gif" />
+    <Content Include="Images\Vista_04.gif" />
+    <Content Include="Images\Vista_06.gif" />
+    <Content Include="Images\Vista_07.gif" />
+    <Content Include="Images\Vista_menu_line1.gif" />
+    <Content Include="Interfaces\Administrator\pgChangePassword.aspx" />
+    <Content Include="Interfaces\Administrator\pgUserReportRight.aspx" />
+    <Content Include="Interfaces\Administrator\UserMaintenance.aspx" />
+    <Content Include="Interfaces\AnalysisService\AdviserMonth.aspx" />
+    <Content Include="Interfaces\AnalysisService\FumByDateByProduct.aspx" />
+    <Content Include="Interfaces\AnalysisService\FumByProductByDate.aspx" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Css\dashboard mng.css" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\DashboardMng.aspx" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\DashboardViewer.aspx" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\DashboardViewerFour.aspx" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\DashboardViewerSecond.aspx" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\DashboardViewerThird.aspx" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg1.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg10.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg11.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg12.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg2.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg3.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg4.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg5.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg6.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg7.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg8.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bg9.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bottom_left.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\bottom_right.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btAdd.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btBenchmark1.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btBenchmark2.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btCreate.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btDraw.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btExpand.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\btSave.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\center_left.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\center_right.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\dashboard.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\grid.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\h_line_bottom.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\h_line_top.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\ico1.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\ico2.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\ico3.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\ico4.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\icoBar.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\icoDoughnut.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\icoFunnel.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\level1.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\level2.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\level3.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\level4.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\tab.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\top_left.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\top_right.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\v_line_left.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\v_line_right.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ada.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\asp.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\aspx.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\atS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_blueS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_glass_blueS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_glass_greenS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_glass_redS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_glass_yellowS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_greenS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_redS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ball_yellowS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\bfly.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\book.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\BookY.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\category.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\contact.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\delete_test1.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\delete_test2.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\doc.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\dsChild.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\dsParent.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\dsRoot.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\flag.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\Folder.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\Folder_o.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\folder_old.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\folder_small.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\Folder_Y.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\goblet_bronzeS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\help.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\help_book.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\help_obook.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\help_page.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\hr.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\hr_l.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ico_note.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ie.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ie_link.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ie_link_old.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\ie_small.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\joypadS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\lens.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\memobook.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\memobook_blue.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\minus.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\minus_l.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\mydoc.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\n.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\obout_treeview2.css" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oCalendar.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oDrafts.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oInbox.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oInboxF.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oJornal.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oJunk.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oMailbox.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oMessage.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oNotes.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oOutlook.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oRecycle.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oSearch.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oSearchF.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oSent.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\oTasks.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\page.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\person.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\plus.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\plusik.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\plusik_l.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\print.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\prodgp.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\question.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\recycle.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\red_ball.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\scales.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\search.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\search_globe.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\Segment.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\shoprite.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\square_blueS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\square_greenS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\square_redS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\square_yellowS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\tree.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\triangle_blueS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\triangle_greenS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\triangle_redS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\triangle_yellowS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\vertical.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\woman1S.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\woman2S.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\woman3S.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\woman4S.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\workerS.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpAdmin.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpCdRom.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpDesktop.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpDriveA.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpFolder.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpLens.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpMyComp.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpMyDoc.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpNetPlace.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpNetwork.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpPanel.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpPrinter.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpRecentDoc.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpRecycle.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\icons\xpShared.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\script\ob_events_2038.js" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\script\ob_mdn_2038.js" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\script\ob_tree_2038.js" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\hr.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\hr_L.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\minus.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\minus_L.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\minus_r.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\obout_treeview2.css" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\plusik.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\plusik_L.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\plusik_r.gif" />
+    <Content Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\vertical.gif" />
+    <Content Include="Interfaces\Dashboard\DashboardDefaultViewer.aspx" />
+    <Content Include="Interfaces\Dashboard\pgViewDashboard.aspx" />
+    <Content Include="Interfaces\pgAdministration.aspx" />
+    <Content Include="Interfaces\pgTemp.aspx" />
+    <Content Include="Interfaces\pgUnderConstruction.aspx" />
+    <Content Include="Interfaces\StandardReports\AdviserFumReport.aspx" />
+    <Content Include="Interfaces\StandardReports\AdviserInflowReport.aspx" />
+    <Content Include="Interfaces\StandardReports\AdviserNetflowReport.aspx" />
+    <Content Include="Interfaces\StandardReports\AdviserOutflowReport.aspx" />
+    <Content Include="Interfaces\StandardReports\FumReport.aspx" />
+    <Content Include="Interfaces\StandardReports\FundsFlowByAccountReport.aspx" />
+    <Content Include="Interfaces\StandardReports\FundsFlowByProduct.aspx" />
+    <Content Include="Interfaces\StandardReports\InvestmentOptionTransactionReport.aspx" />
+    <Content Include="Interfaces\StandardReports\InvestorSummary.aspx" />
+    <Content Include="Interfaces\StandardReports\ReportPage.aspx" />
+    <Content Include="Interfaces\System Config\index.htm" />
+    <Content Include="Interfaces\System Config\IntelliVueLogo.jpg" />
+    <Content Include="Interfaces\System Config\Login10.gif" />
+    <Content Include="Interfaces\System Config\MiddleBanner.jpg" />
+    <Content Include="Interfaces\System Config\Penlogo.jpg" />
+    <Content Include="Interfaces\System Config\pgInterfaceConfig.aspx" />
+    <Content Include="Interfaces\System Config\pgInterfaceConfig.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Interfaces\System Config\pgTemp.aspx" />
+    <Content Include="Interfaces\System Config\pgTemp.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Interfaces\System Config\Photo.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AlertIcon\Thumbs.db" />
+    <None Include="Images\DragonCapital\Thumbs.db" />
+    <None Include="Images\icon_web\Thumbs.db" />
+    <None Include="Images\Menu.psd" />
+    <None Include="Images\newActionIco\Thumbs.db" />
+    <None Include="Images\Thumbs.db" />
+    <None Include="Interfaces\Dashboard\DasboardMng\Images\dashboard mng\Thumbs.db" />
+    <None Include="Interfaces\Dashboard\DasboardMng\Images\Thumbs.db" />
+    <None Include="Interfaces\Dashboard\DasboardMng\tree2\icons\Thumbs.db" />
+    <None Include="Interfaces\Dashboard\DasboardMng\tree2\style\Classic\Thumbs.db" />
+    <None Include="Interfaces\Dashboard\DasboardMng\tree2\Thumbs.db" />
+    <None Include="Interfaces\System Config\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\TempImage\" />
+    <Folder Include="Javascript\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58802</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

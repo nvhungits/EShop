@@ -1,0 +1,89 @@
+﻿body 
+{
+    margin:0;
+}
+
+/* Master Page Styles */
+#master
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:996px;
+    min-height:1px;
+    font:12px Arial;
+}
+#masterTopPanelContainer
+{
+    float:left;
+    width:100%;
+    height:61px;
+    background:#BCD7C4;
+}
+#masterTopPanel
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:996px;
+    height:61px;
+    background:#BCD7C4;
+}
+#masterTopRightNavDV
+{
+    float:right;
+    min-height:1px;
+}
+#masterTopRightNavDV a
+{
+    font:600 11px Tahoma;
+    color:#0A2840;
+    text-decoration:none;
+}
+#masterTopRightNavDV .split
+{
+    margin-left:1px;
+    margin-right:1px;
+    font:12px Arial;
+    color:#0A2840;
+}
+#masterTopMenuPanel
+{
+    float:left;
+    width:996px;
+    height:39px;
+    background:#A2C4B3;
+}
+#masterTopRightTextBlock
+{
+    float:left;
+    margin-left:15px;
+    font:600 12px Tahoma;
+    color:#FFFFFF;
+}
+#masterLeftMenuPanel
+{
+    position:absolute;
+    top:103px;
+}
+#masterFooterPanel
+{
+    float:left;
+    width:594px;
+    min-height:1px;
+}
+#masterFooterPanel .footerText
+{
+    font:600 12px Tahoma;
+    color:#000000;
+}
+#masterGototopPanel
+{
+    float:left;
+    width:390px;
+    text-align:right;
+}
+#masterGototopPanel a
+{
+    font:600 13px Tahoma;
+    color:#77A399;
+    text-decoration:none;
+}

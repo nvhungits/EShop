@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Admin_MVC5Bootstrap_Intellivue.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DW_Intellivuedemo.dbo.tblAccount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblAccount">
+    <Key>
+      <PropertyRef Name="AcctNo" />
+      <PropertyRef Name="ProdNo" />
+      <PropertyRef Name="AcctType" />
+      <PropertyRef Name="RCV" />
+      <PropertyRef Name="GuaranteedTerm" />
+      <PropertyRef Name="JointAnnuitantDecreasePerc" />
+      <PropertyRef Name="CompliantFlag" />
+      <PropertyRef Name="ETPFlag" />
+      <PropertyRef Name="AnnualIntRatePerc" />
+      <PropertyRef Name="CommutableFlag" />
+      <PropertyRef Name="ReturnMail" />
+      <PropertyRef Name="ContinuityCertReturned" />
+    </Key>
+    <Property Name="OfficePersonCode" Type="char" MaxLength="6" />
+    <Property Name="BlockCode" Type="char" MaxLength="3" />
+    <Property Name="AcctNo" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="ResidentCode" Type="char" MaxLength="1" />
+    <Property Name="ResidentCountryCode" Type="char" MaxLength="4" />
+    <Property Name="AcctType" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DateOpened" Type="datetime" />
+    <Property Name="DateClosed" Type="datetime" />
+    <Property Name="EmailAddr1" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddr2" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline1" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline2" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline3" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline4" Type="varchar" MaxLength="50" />
+    <Property Name="Suburb" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="char" MaxLength="10" />
+    <Property Name="Postcode" Type="char" MaxLength="10" />
+    <Property Name="CountryCode" Type="char" MaxLength="4" />
+    <Property Name="MailingName" Type="varchar" MaxLength="150" />
+    <Property Name="CorrName" Type="varchar" MaxLength="100" />
+    <Property Name="ILCN" Type="char" MaxLength="9" />
+    <Property Name="LenderNo" Type="char" MaxLength="6" />
+    <Property Name="AdvGroupCode" Type="char" MaxLength="6" />
+    <Property Name="FileNote" Type="text" />
+    <Property Name="BankID" Type="char" MaxLength="6" />
+    <Property Name="BankBSB" Type="char" MaxLength="10" />
+    <Property Name="BankAcctNo" Type="char" MaxLength="15" />
+    <Property Name="BankAcctName" Type="varchar" MaxLength="50" />
+    <Property Name="BankAddr" Type="varchar" MaxLength="50" />
+    <Property Name="TelWithdrawal" Type="char" MaxLength="1" />
+    <Property Name="TFNRule" Type="char" MaxLength="1" />
+    <Property Name="ABN" Type="varchar" MaxLength="12" />
+    <Property Name="DateLastChanged" Type="datetime" />
+    <Property Name="AcctName" Type="varchar" MaxLength="150" />
+    <Property Name="AcctSortingName" Type="varchar" MaxLength="100" />
+    <Property Name="CCAdviserFlag" Type="char" MaxLength="1" />
+    <Property Name="TaxExempt" Type="char" MaxLength="1" />
+    <Property Name="TaxExemptCode" Type="char" MaxLength="10" />
+    <Property Name="ChildDOB" Type="datetime" />
+    <Property Name="TelSwitching" Type="char" MaxLength="1" />
+    <Property Name="TelDeposit" Type="char" MaxLength="1" />
+    <Property Name="Consent" Type="varchar" MaxLength="100" />
+    <Property Name="ExternalNo1" Type="varchar" MaxLength="50" />
+    <Property Name="ExternalNo2" Type="varchar" MaxLength="50" />
+    <Property Name="ACN" Type="varchar" MaxLength="10" />
+    <Property Name="PIN" Type="varchar" MaxLength="256" />
+    <Property Name="PINPostedDate" Type="datetime" />
+    <Property Name="PINFlag" Type="char" MaxLength="1" />
+    <Property Name="TempPIN" Type="varchar" MaxLength="20" />
+    <Property Name="TempTrustee" Type="char" MaxLength="1" />
+    <Property Name="TempABN" Type="char" MaxLength="10" />
+    <Property Name="WorkFax" Type="varchar" MaxLength="20" />
+    <Property Name="CorrMethod" Type="char" MaxLength="1" />
+    <Property Name="ExmptTaxSec128B" Type="char" MaxLength="1" />
+    <Property Name="TrusteeCapacity" Type="char" MaxLength="1" />
+    <Property Name="ExmptOtherIncomeTaxSec23" Type="char" MaxLength="1" />
+    <Property Name="ExmptOtherIncomeIntOrg" Type="char" MaxLength="1" />
+    <Property Name="NonResidentFromDate" Type="datetime" />
+    <Property Name="NonResidentToDate" Type="datetime" />
+    <Property Name="InterfundAcctFlag" Type="char" MaxLength="1" />
+    <Property Name="InterfundAcctprodNo" Type="int" />
+    <Property Name="NoPin" Type="int" />
+    <Property Name="LastDocNo" Type="bigint" />
+    <Property Name="ASFFee" Type="money" />
+    <Property Name="ASFRate" Type="money" />
+    <Property Name="ChequeBookReq" Type="char" MaxLength="1" />
+    <Property Name="DepositBookReq" Type="char" MaxLength="1" />
+    <Property Name="DebitCardReq" Type="char" MaxLength="1" />
+    <Property Name="ChequeBookSize" Type="smallint" />
+    <Property Name="LastChequeNum" Type="int" />
+    <Property Name="ChequeBookOrdered" Type="char" MaxLength="1" />
+    <Property Name="DepositBookOrdered" Type="char" MaxLength="1" />
+    <Property Name="ProdBSB" Type="varchar" MaxLength="9" />
+    <Property Name="PowerType" Type="char" MaxLength="1" />
+    <Property Name="FISFlag" Type="char" MaxLength="1" />
+    <Property Name="ASFRejectionCounted" Type="int" />
+    <Property Name="PrintFlag" Type="char" MaxLength="1" />
+    <Property Name="ReportTypes" Type="varchar" MaxLength="50" />
+    <Property Name="DebitCardOrdered" Type="char" MaxLength="1" />
+    <Property Name="PersonalContrib" Type="money" />
+    <Property Name="EmployerContrib" Type="money" />
+    <Property Name="SalarySacrifice" Type="money" />
+    <Property Name="SpouseContrib" Type="money" />
+    <Property Name="PersonalContribTaxDeduction" Type="money" />
+    <Property Name="Indexation" Type="char" MaxLength="1" />
+    <Property Name="IndexationRate" Type="float" />
+    <Property Name="CommissionOption" Type="char" MaxLength="1" />
+    <Property Name="RCV" Type="int" Nullable="false" />
+    <Property Name="Term" Type="int" />
+    <Property Name="TermType" Type="char" MaxLength="10" />
+    <Property Name="GuaranteedTerm" Type="int" Nullable="false" />
+    <Property Name="JointAnnuitantDecreasePerc" Type="money" Nullable="false" />
+    <Property Name="CompliantFlag" Type="bit" Nullable="false" />
+    <Property Name="ETPFlag" Type="bit" Nullable="false" />
+    <Property Name="IsServicePensionAge" Type="bit" />
+    <Property Name="PaymentFreq" Type="char" MaxLength="1" />
+    <Property Name="PaymentType" Type="char" MaxLength="1" />
+    <Property Name="AnnualIntRatePerc" Type="money" Nullable="false" />
+    <Property Name="AnnualPaymentAmt" Type="money" />
+    <Property Name="QuoteNo" Type="char" MaxLength="16" />
+    <Property Name="RelevantNo" Type="float" />
+    <Property Name="UnDeductPP" Type="money" />
+    <Property Name="PurchasePrice" Type="money" />
+    <Property Name="NextPayDate" Type="datetime" />
+    <Property Name="NextReviewDate" Type="datetime" />
+    <Property Name="NextPaymentAmt" Type="money" />
+    <Property Name="InitialReviewDate" Type="datetime" />
+    <Property Name="AnnualDeductibleAmt" Type="money" />
+    <Property Name="CommutableFlag" Type="bit" Nullable="false" />
+    <Property Name="BadgeId" Type="char" MaxLength="10" />
+    <Property Name="ReturnMail" Type="bit" Nullable="false" />
+    <Property Name="GuarEarnRateWithoutInflation" Type="float" />
+    <Property Name="ExtensionOfPolicy" Type="char" MaxLength="1" />
+    <Property Name="ContinuityCertReturned" Type="bit" Nullable="false" />
+    <Property Name="DeductibleAdjustmentAmt" Type="money" />
+    <Property Name="ExternalNo3" Type="varchar" MaxLength="50" />
+    <Property Name="IncomeAdjustmentAmt" Type="money" />
+    <Property Name="InvestFacility" Type="int" />
+  </EntityType>
+  <EntityType Name="TblAccountInvOpt">
+    <Key>
+      <PropertyRef Name="AcctNo" />
+      <PropertyRef Name="ProdNo" />
+    </Key>
+    <Property Name="AcctNo" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="ParentProdNo" Type="int" />
+    <Property Name="Unit" Type="money" Nullable="false" />
+    <Property Name="DistMethod" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="LastDistDate" Type="datetime" />
+    <Property Name="SavingPlanAmt" Type="money" />
+    <Property Name="SavingPlanFreq" Type="char" MaxLength="3" />
+    <Property Name="SavingPlanStartDate" Type="datetime" />
+    <Property Name="SavingPlanNextDate" Type="datetime" />
+    <Property Name="AutoCashAmt" Type="money" />
+    <Property Name="AutoCashFreq" Type="char" MaxLength="3" />
+    <Property Name="AutoCashStartDate" Type="datetime" />
+    <Property Name="AutoCashNextDate" Type="datetime" />
+    <Property Name="ChequeBookReq" Type="char" MaxLength="1" />
+    <Property Name="DepositBookReq" Type="char" MaxLength="1" />
+    <Property Name="NPRPerc" Type="money" />
+    <Property Name="DateLastChanged" Type="datetime" />
+    <Property Name="TrailRate" Type="money" />
+    <Property Name="MgmtFeeRebateType" Type="char" MaxLength="1" />
+    <Property Name="MgmtFeeRebateRate" Type="float" />
+    <Property Name="MgmtFeeRebateCode" Type="char" MaxLength="4" />
+    <Property Name="MgmtFeePaymentMethod" Type="char" MaxLength="1" />
+    <Property Name="MgmtFeeEffectiveDate" Type="datetime" />
+    <Property Name="NPRMgr" Type="char" MaxLength="1" />
+    <Property Name="NPRMonthlyPymtAmt" Type="money" />
+    <Property Name="NPRLastReviewDate" Type="datetime" />
+    <Property Name="FISPerc" Type="money" />
+    <Property Name="PercApplFee" Type="money" />
+    <Property Name="DollarApplFee" Type="money" />
+    <Property Name="PercASFFee" Type="money" />
+    <Property Name="AccruedInterest" Type="money" />
+    <Property Name="TrailRebateRate" Type="money" />
+    <Property Name="RSPExpiryDate" Type="datetime" />
+    <Property Name="ACExpiryDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAdviser">
+    <Key>
+      <PropertyRef Name="AdviserNo" />
+    </Key>
+    <Property Name="AdviserNo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="ParentAdviserNo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="AdviserType" Type="char" MaxLength="1" />
+    <Property Name="AdviserName" Type="varchar" MaxLength="60" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="AdviserGroupNo" Type="char" MaxLength="6" />
+    <Property Name="HasChildNode" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DateOpened" Type="datetime" />
+    <Property Name="DateClosed" Type="datetime" />
+    <Property Name="EmailAddr1" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddr2" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline1" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline2" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline3" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline4" Type="varchar" MaxLength="50" />
+    <Property Name="Suburb" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="6" />
+    <Property Name="Postcode" Type="varchar" MaxLength="6" />
+    <Property Name="CountryCode" Type="char" MaxLength="4" />
+    <Property Name="MailingName" Type="varchar" MaxLength="50" />
+    <Property Name="CorrName" Type="varchar" MaxLength="50" />
+    <Property Name="ILGN" Type="varchar" MaxLength="50" />
+    <Property Name="FileNote" Type="text" />
+    <Property Name="BankBSB" Type="varchar" MaxLength="7" />
+    <Property Name="BankAcctNo" Type="varchar" MaxLength="12" />
+    <Property Name="BankAcctName" Type="varchar" MaxLength="100" />
+    <Property Name="DealerLicense" Type="varchar" MaxLength="10" />
+    <Property Name="WorkTel" Type="varchar" MaxLength="30" />
+    <Property Name="WorkFax" Type="varchar" MaxLength="30" />
+    <Property Name="LastChangedDate" Type="datetime" />
+    <Property Name="Mobile" Type="varchar" MaxLength="30" />
+    <Property Name="ABN" Type="varchar" MaxLength="12" />
+    <Property Name="LicenceNo" Type="varchar" MaxLength="20" />
+    <Property Name="RCTIFlag" Type="char" MaxLength="1" />
+    <Property Name="RCTIDate" Type="datetime" />
+    <Property Name="ClientNotification" Type="char" MaxLength="1" />
+    <Property Name="ClientNotificationAtGroup" Type="char" MaxLength="1" />
+    <Property Name="DirectMarketingFlag" Type="char" MaxLength="1" />
+    <Property Name="PaymentMethod" Type="char" MaxLength="1" />
+    <Property Name="RebateTrailFlag" Type="char" MaxLength="1" />
+    <Property Name="TrailPayable" Type="char" MaxLength="1" />
+    <Property Name="CommPayable" Type="char" MaxLength="1" />
+    <Property Name="UserID" Type="varchar" MaxLength="16" />
+    <Property Name="ExtRef1" Type="varchar" MaxLength="30" />
+    <Property Name="ExtRef2" Type="varchar" MaxLength="30" />
+    <Property Name="ExtRef3" Type="varchar" MaxLength="30" />
+    <Property Name="ReportState" Type="varchar" MaxLength="6" />
+    <Property Name="pAddrLine1" Type="varchar" MaxLength="50" />
+    <Property Name="pAddrLine2" Type="varchar" MaxLength="50" />
+    <Property Name="pAddrLine3" Type="varchar" MaxLength="50" />
+    <Property Name="pSuburb" Type="varchar" MaxLength="50" />
+    <Property Name="pState" Type="varchar" MaxLength="6" />
+    <Property Name="pPostcode" Type="varchar" MaxLength="6" />
+    <Property Name="pCountryCode" Type="char" MaxLength="4" />
+    <Property Name="AdviserRef" Type="varchar" MaxLength="30" />
+    <Property Name="Agent" Type="varchar" MaxLength="50" />
+    <Property Name="RebatePerc" Type="money" />
+    <Property Name="LastStmtDate" Type="datetime" />
+    <Property Name="LastStmtNo" Type="int" />
+    <Property Name="LastPymtAmt" Type="money" />
+    <Property Name="LastPymtWithheldFlag" Type="char" MaxLength="1" />
+    <Property Name="WithheldReason" Type="varchar" MaxLength="250" />
+    <Property Name="DialUpCommPerc" Type="money" />
+    <Property Name="ABNDate" Type="datetime" />
+    <Property Name="LicenceDate" Type="datetime" />
+    <Property Name="AllowASF" Type="int" />
+    <Property Name="AFSL" Type="varchar" MaxLength="8" />
+    <Property Name="CRef" Type="varchar" MaxLength="8" />
+    <Property Name="DPIDCode" Type="varchar" MaxLength="8" />
+    <Property Name="CCFirstName" Type="varchar" MaxLength="20" />
+    <Property Name="CCLastName" Type="varchar" MaxLength="20" />
+    <Property Name="UpfrontPerc" Type="money" />
+    <Property Name="UpfrontCFSGPerc" Type="money" />
+    <Property Name="TrailPerc" Type="money" />
+    <Property Name="TrailCFSGPerc" Type="money" />
+    <Property Name="GSTReg" Type="char" MaxLength="1" />
+    <Property Name="GSTRegDate" Type="datetime" />
+    <Property Name="DealerType" Type="varchar" MaxLength="1" />
+    <Property Name="DealerSubType" Type="varchar" MaxLength="1" />
+    <Property Name="RptfreqFUM" Type="char" MaxLength="1" />
+    <Property Name="RptfreqIL" Type="char" MaxLength="1" />
+    <Property Name="RptfreqACC" Type="char" MaxLength="1" />
+    <Property Name="RptfreqTL" Type="char" MaxLength="1" />
+    <Property Name="DeliveryFUM" Type="char" MaxLength="1" />
+    <Property Name="DeliveryIL" Type="char" MaxLength="1" />
+    <Property Name="DeliveryACC" Type="char" MaxLength="1" />
+    <Property Name="DeliveryTL" Type="char" MaxLength="1" />
+    <Property Name="LastSentFUM" Type="char" MaxLength="10" />
+    <Property Name="LastSentIL" Type="char" MaxLength="10" />
+    <Property Name="LastSentACC" Type="char" MaxLength="10" />
+    <Property Name="LastSentTL" Type="char" MaxLength="10" />
+    <Property Name="InvLinkFullExtract" Type="char" MaxLength="1" />
+    <Property Name="BrokerageStmDelivery" Type="char" MaxLength="1" />
+    <Property Name="BrokStmtFormat" Type="char" MaxLength="1" />
+    <Property Name="BrokReport" Type="char" MaxLength="1" />
+    <Property Name="TradingAs" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAuthorization">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="AuthorizationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AuthorisationAccessRight" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DW_Intellivuedemo.dbo.tblCode' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblCode">
+    <Key>
+      <PropertyRef Name="CodeType" />
+    </Key>
+    <Property Name="CodeType" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Code" Type="char" MaxLength="20" />
+    <Property Name="CodeDesc" Type="varchar" MaxLength="60" />
+    <Property Name="CodeReportShortDesc" Type="varchar" MaxLength="10" />
+    <Property Name="CodeSensivity" Type="char" MaxLength="1" />
+    <Property Name="CodeDisplaySeq" Type="char" MaxLength="1" />
+    <Property Name="CodeDisplaySeqNo" Type="char" MaxLength="10" />
+    <Property Name="CodeDefValue" Type="char" MaxLength="10" />
+    <Property Name="CodeLength" Type="int" />
+    <Property Name="LoadType" Type="char" MaxLength="1" />
+    <Property Name="CodeSeverity" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DW_Intellivuedemo.dbo.tblCountryPostCode' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblCountryPostCode">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryCode" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Postcode" Type="char" MaxLength="4" />
+    <Property Name="Locality" Type="varchar" MaxLength="46" />
+    <Property Name="State" Type="varchar" MaxLength="3" />
+    <Property Name="Comments" Type="varchar" MaxLength="30" />
+    <Property Name="DeliveryOffice" Type="varchar" MaxLength="30" />
+    <Property Name="PresortIndicator" Type="char" MaxLength="3" />
+    <Property Name="ParcelZone" Type="char" MaxLength="3" />
+    <Property Name="BSPnumber" Type="char" MaxLength="3" />
+    <Property Name="BSPname" Type="char" MaxLength="16" />
+    <Property Name="Category" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DW_Intellivuedemo.dbo.tblCubeManagement' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblCubeManagement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CubeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CubePath" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="ExternalID1" Type="varchar" MaxLength="20" />
+    <Property Name="ExternalID2" Type="varchar" MaxLength="20" />
+    <Property Name="CustName" Type="varchar" MaxLength="150" />
+    <Property Name="CustGivenName" Type="varchar" MaxLength="50" />
+    <Property Name="CustCategory" Type="varchar" MaxLength="50" />
+    <Property Name="CustTitle" Type="varchar" MaxLength="50" />
+    <Property Name="CustType" Type="char" MaxLength="1" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="DateOpened" Type="datetime" />
+    <Property Name="DateClosed" Type="datetime" />
+    <Property Name="DateLastChanged" Type="datetime" />
+    <Property Name="DateofProbate" Type="datetime" />
+    <Property Name="DateofDealth" Type="datetime" />
+    <Property Name="SourceCode" Type="char" MaxLength="3" />
+    <Property Name="BlockCode" Type="char" MaxLength="3" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="HomeTel" Type="varchar" MaxLength="50" />
+    <Property Name="WorkTel" Type="varchar" MaxLength="50" />
+    <Property Name="HomeFax" Type="varchar" MaxLength="50" />
+    <Property Name="WorkFax" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddr1" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddr2" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline1" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline2" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline3" Type="varchar" MaxLength="50" />
+    <Property Name="Addrline4" Type="varchar" MaxLength="50" />
+    <Property Name="Suburb" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Postcode" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="4" />
+    <Property Name="MailingName" Type="varchar" MaxLength="150" />
+    <Property Name="CorrName" Type="varchar" MaxLength="50" />
+    <Property Name="ResidentCode" Type="char" MaxLength="1" />
+    <Property Name="ResidentCountryCode" Type="char" MaxLength="4" />
+    <Property Name="FileNote" Type="text" />
+    <Property Name="ABN" Type="varchar" MaxLength="12" />
+    <Property Name="TempOrderNo" Type="int" />
+    <Property Name="Sex" Type="char" MaxLength="1" />
+    <Property Name="DeceasedDate" Type="datetime" />
+    <Property Name="ReturnMail" Type="bit" Nullable="false" />
+    <Property Name="IsServicePensionAge" Type="char" MaxLength="1" />
+    <Property Name="DeathNotifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DW_Intellivuedemo.dbo.tblCustomerAccount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblCustomerAccount">
+    <Key>
+      <PropertyRef Name="CustID" />
+      <PropertyRef Name="AcctNo" />
+      <PropertyRef Name="ProdNo" />
+      <PropertyRef Name="DeductibleAmt" />
+      <PropertyRef Name="FamilyTaxBenefit" />
+      <PropertyRef Name="FinSupplementDebt" />
+      <PropertyRef Name="HECS" />
+      <PropertyRef Name="SpecRebates" />
+    </Key>
+    <Property Name="CustID" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="AcctNo" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="TaxFileNo" Type="varchar" MaxLength="11" />
+    <Property Name="TFNStatus" Type="char" MaxLength="1" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="DateTFN" Type="datetime" />
+    <Property Name="PrimaryOwnerFlag" Type="char" MaxLength="1" />
+    <Property Name="RelationshipCode" Type="char" MaxLength="4" />
+    <Property Name="SignatoryFlag" Type="char" MaxLength="1" />
+    <Property Name="DateLastChanged" Type="datetime" />
+    <Property Name="ABN" Type="varchar" MaxLength="12" />
+    <Property Name="TaxExemptCode" Type="char" MaxLength="10" />
+    <Property Name="ChildDOB" Type="datetime" />
+    <Property Name="NonResidentFromDate" Type="datetime" />
+    <Property Name="NonResidentToDate" Type="datetime" />
+    <Property Name="ExmptTaxSec128B" Type="char" MaxLength="1" />
+    <Property Name="TrusteeCapacity" Type="char" MaxLength="1" />
+    <Property Name="ExmptOtherIncomeTaxSec23" Type="char" MaxLength="1" />
+    <Property Name="ExmptOtherIncomeIntOrg" Type="char" MaxLength="1" />
+    <Property Name="ResidentCode" Type="char" MaxLength="1" />
+    <Property Name="ResidentCountrycode" Type="char" MaxLength="4" />
+    <Property Name="ABNStatus" Type="char" MaxLength="1" />
+    <Property Name="ProdBSB" Type="varchar" MaxLength="9" />
+    <Property Name="TaxRebateAmt" Type="money" />
+    <Property Name="ClaimTaxFreeFlag" Type="char" MaxLength="1" />
+    <Property Name="TFNExemptReason" Type="varchar" MaxLength="10" />
+    <Property Name="TFNPermission" Type="char" MaxLength="1" />
+    <Property Name="AustResTaxFlag" Type="char" MaxLength="1" />
+    <Property Name="FlatTaxRate" Type="float" />
+    <Property Name="FlatRateExpDate" Type="datetime" />
+    <Property Name="TaxExemptFlag" Type="char" MaxLength="1" />
+    <Property Name="ClaimETPRebateFlag" Type="char" MaxLength="1" />
+    <Property Name="ETPReasonCode" Type="varchar" MaxLength="10" />
+    <Property Name="SATOFlag" Type="char" MaxLength="1" />
+    <Property Name="SATOCat" Type="varchar" MaxLength="10" />
+    <Property Name="MedicareExemptType" Type="varchar" MaxLength="10" />
+    <Property Name="ETPRebateProportion" Type="float" />
+    <Property Name="DeductibleAmt" Type="bit" Nullable="false" />
+    <Property Name="FamilyTaxBenefit" Type="bit" Nullable="false" />
+    <Property Name="FinSupplementDebt" Type="bit" Nullable="false" />
+    <Property Name="HECS" Type="bit" Nullable="false" />
+    <Property Name="SpecRebates" Type="bit" Nullable="false" />
+    <Property Name="PayBasis" Type="char" MaxLength="1" />
+    <Property Name="RebatableProportion" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DW_Intellivuedemo.dbo.tblDashboardDemo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblDashboardDemo">
+          <Property Name="EffDate" Type="datetime" />
+          <Property Name="Actual" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Benchmark" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KPI" Type="nvarchar" MaxLength="5" />
+        </EntityType>-->
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="ProdNo" />
+    </Key>
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="ParentProdNo" Type="int" Nullable="false" />
+    <Property Name="ProdGroup" Type="char" MaxLength="1" />
+    <Property Name="ProdName" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ProdShortName" Type="varchar" MaxLength="50" />
+    <Property Name="ProdType" Type="char" MaxLength="2" />
+    <Property Name="ProdIntroDate" Type="datetime" />
+    <Property Name="ProdCloseDate" Type="datetime" />
+    <Property Name="HasChildNode" Type="char" MaxLength="1" />
+    <Property Name="DistFreq" Type="char" MaxLength="1" />
+    <Property Name="StmtFreq" Type="char" MaxLength="1" />
+    <Property Name="TelWithdrawal" Type="char" MaxLength="1" />
+    <Property Name="TelDeposit" Type="char" MaxLength="1" />
+    <Property Name="TelSwitching" Type="char" MaxLength="1" />
+    <Property Name="TrailFreq" Type="char" MaxLength="1" />
+    <Property Name="CommFreq" Type="char" MaxLength="1" />
+    <Property Name="SavingPlanFreq" Type="char" MaxLength="3" />
+    <Property Name="AutoCashFreq" Type="char" MaxLength="3" />
+    <Property Name="DistMethod" Type="char" MaxLength="1" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="APIR" Type="varchar" MaxLength="12" />
+    <Property Name="ABN" Type="varchar" MaxLength="12" />
+    <Property Name="ARSN" Type="varchar" MaxLength="12" />
+    <Property Name="CurrencyCode" Type="char" MaxLength="4" />
+    <Property Name="DepBook" Type="char" MaxLength="1" />
+    <Property Name="ChqBook" Type="char" MaxLength="1" />
+    <Property Name="NPR" Type="char" MaxLength="1" />
+    <Property Name="UserID" Type="varchar" MaxLength="16" />
+    <Property Name="LastChangedDate" Type="datetime" />
+    <Property Name="ChqBookSize" Type="smallint" />
+    <Property Name="DepBookSize" Type="smallint" />
+    <Property Name="InputSeqNo" Type="smallint" />
+    <Property Name="ReportSeqNo" Type="smallint" />
+    <Property Name="WithdrawalSeqNo" Type="smallint" />
+    <Property Name="LinktoPool" Type="char" MaxLength="1" />
+    <Property Name="PoolProdNo" Type="int" />
+    <Property Name="AcctProdNo" Type="int" />
+    <Property Name="ChildLevel" Type="int" />
+    <Property Name="Mnemonic" Type="varchar" MaxLength="10" />
+    <Property Name="BankAcctName" Type="varchar" MaxLength="60" />
+    <Property Name="BankAcctNo" Type="varchar" MaxLength="15" />
+    <Property Name="BSB" Type="varchar" MaxLength="9" />
+    <Property Name="BankName" Type="varchar" MaxLength="10" />
+    <Property Name="CRName" Type="varchar" MaxLength="60" />
+    <Property Name="CRNo" Type="varchar" MaxLength="9" />
+    <Property Name="DBName" Type="varchar" MaxLength="60" />
+    <Property Name="DBNo" Type="varchar" MaxLength="9" />
+    <Property Name="DBBankAcctName" Type="varchar" MaxLength="60" />
+    <Property Name="DBBankAcctNo" Type="varchar" MaxLength="15" />
+    <Property Name="DBBSB" Type="varchar" MaxLength="9" />
+    <Property Name="DBBankName" Type="varchar" MaxLength="10" />
+    <Property Name="AdvDBName" Type="varchar" MaxLength="60" />
+    <Property Name="AdvDBNo" Type="varchar" MaxLength="9" />
+    <Property Name="AdvDBBankAcctName" Type="varchar" MaxLength="60" />
+    <Property Name="AdvDBBSB" Type="varchar" MaxLength="9" />
+    <Property Name="AdvDBBankAcctNo" Type="varchar" MaxLength="15" />
+    <Property Name="AdvDBBankName" Type="varchar" MaxLength="50" />
+    <Property Name="ProdClosetoNewDate" Type="datetime" />
+    <Property Name="TFNRequired" Type="char" MaxLength="1" />
+    <Property Name="MgmtFeeFreq" Type="char" MaxLength="1" />
+    <Property Name="InterfaceCode" Type="varchar" MaxLength="20" />
+    <Property Name="InterfaceDesc" Type="varchar" MaxLength="100" />
+    <Property Name="SavingPlan" Type="char" MaxLength="1" />
+    <Property Name="AutoCash" Type="char" MaxLength="1" />
+    <Property Name="DateOfBirthRequired" Type="char" MaxLength="1" />
+    <Property Name="InsuranceOffered" Type="char" MaxLength="1" />
+    <Property Name="ResEntityName" Type="varchar" MaxLength="80" />
+    <Property Name="TrustFullName" Type="varchar" MaxLength="80" />
+    <Property Name="ACN" Type="varchar" MaxLength="12" />
+    <Property Name="ContactName" Type="varchar" MaxLength="50" />
+    <Property Name="AddrLine1" Type="varchar" MaxLength="50" />
+    <Property Name="AddrLine2" Type="varchar" MaxLength="50" />
+    <Property Name="AddrLine3" Type="varchar" MaxLength="50" />
+    <Property Name="AddrLine4" Type="varchar" MaxLength="50" />
+    <Property Name="Suburb" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="10" />
+    <Property Name="PostCode" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="4" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="ReturnMedia" Type="char" MaxLength="1" />
+    <Property Name="ProdBSB" Type="varchar" MaxLength="9" />
+    <Property Name="PfolioFamily" Type="varchar" MaxLength="2" />
+    <Property Name="AdvSerFeeFreq" Type="char" MaxLength="1" />
+    <Property Name="MPLastRunDate" Type="datetime" />
+    <Property Name="IPDLastRunDate" Type="datetime" />
+    <Property Name="ATOMnemonic" Type="varchar" MaxLength="6" />
+    <Property Name="ICLastRunDate" Type="datetime" />
+    <Property Name="SRLastRunDate" Type="datetime" />
+    <Property Name="AccountPrefixActive" Type="char" MaxLength="1" />
+    <Property Name="AccountPrefixUsed" Type="varchar" MaxLength="10" />
+    <Property Name="AccountPrefixNext" Type="char" MaxLength="1" />
+    <Property Name="ASFSeqNo" Type="int" />
+    <Property Name="ASFGSTType" Type="char" MaxLength="1" />
+    <Property Name="SFN" Type="varchar" MaxLength="50" />
+    <Property Name="RSPIndexation" Type="char" MaxLength="1" />
+    <Property Name="CNTTaxProcFreq" Type="char" MaxLength="1" />
+    <Property Name="WHDTaxProcFreq" Type="char" MaxLength="1" />
+    <Property Name="LMPTaxProcFreq" Type="char" MaxLength="1" />
+    <Property Name="CNTTaxNextProcDate" Type="datetime" />
+    <Property Name="WHDTaxNextProcdate" Type="datetime" />
+    <Property Name="LMPTaxNextProcDate" Type="datetime" />
+    <Property Name="TFN" Type="varchar" MaxLength="9" />
+    <Property Name="BranchNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ContactJobTitle" Type="varchar" MaxLength="50" />
+    <Property Name="GenderRequired" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tblProductPrice">
+    <Key>
+      <PropertyRef Name="PriceType" />
+      <PropertyRef Name="ProdNo" />
+      <PropertyRef Name="EffectiveDatetime" />
+    </Key>
+    <Property Name="PriceType" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="EffectiveDatetime" Type="datetime" Nullable="false" />
+    <Property Name="IssuePrice" Type="money" />
+    <Property Name="NetAsset" Type="money" />
+    <Property Name="Redemption" Type="money" />
+    <Property Name="InterestRate" Type="money" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="ParentProdNo" Type="int" />
+    <Property Name="MER" Type="money" />
+    <Property Name="ReinvestIssueDate" Type="datetime" />
+    <Property Name="DistributionRate" Type="float" />
+    <Property Name="LastCHangedDate" Type="datetime" />
+    <Property Name="InputUserID" Type="char" MaxLength="16" />
+    <Property Name="InputDateTime" Type="datetime" />
+    <Property Name="VerifyUserID" Type="char" MaxLength="10" />
+    <Property Name="VerifyDateTime" Type="datetime" />
+    <Property Name="ProcessDateTime" Type="datetime" />
+    <Property Name="TotalDistributionAmt" Type="money" />
+    <Property Name="ActualDistributionAmt" Type="money" />
+    <Property Name="DistDifferenceAmt" Type="money" />
+    <Property Name="TotalInterestAmt" Type="money" />
+    <Property Name="ActualInterestAmt" Type="money" />
+    <Property Name="InterestDifferenceAmt" Type="money" />
+    <Property Name="AllocationInterestRate" Type="float" />
+    <Property Name="NextEffectiveDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DW_Intellivuedemo.dbo.tblProductTotal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblProductTotal">
+    <Key>
+      <PropertyRef Name="ProdNo" />
+      <PropertyRef Name="ParentProdNo" />
+      <PropertyRef Name="ProcessType" />
+      <PropertyRef Name="EffectiveDate" />
+    </Key>
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="ParentProdNo" Type="int" Nullable="false" />
+    <Property Name="ProcessType" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="EffectiveDate" Type="datetime" Nullable="false" />
+    <Property Name="ApplGrossAmt" Type="money" />
+    <Property Name="ApplFeeAmt" Type="money" />
+    <Property Name="ApplRebateAmt" Type="money" />
+    <Property Name="ApplNetAmt" Type="money" />
+    <Property Name="ApplCount" Type="int" />
+    <Property Name="ApplUnits" Type="money" />
+    <Property Name="RdmGrossAmt" Type="money" />
+    <Property Name="RdmNetAmt" Type="money" />
+    <Property Name="RdmCount" Type="int" />
+    <Property Name="RdmUnits" Type="money" />
+    <Property Name="SwitchInGrossAmt" Type="money" />
+    <Property Name="SwitchInFeeAmt" Type="money" />
+    <Property Name="SwitchInRebateAmt" Type="money" />
+    <Property Name="SwitchInNetAmt" Type="money" />
+    <Property Name="SwitchInCount" Type="money" />
+    <Property Name="SwitchInUnits" Type="money" />
+    <Property Name="SwitchOutGrossAmt" Type="money" />
+    <Property Name="SwitchOutNetAmt" Type="money" />
+    <Property Name="SwitchOutCount" Type="int" />
+    <Property Name="SwitchOutUnits" Type="money" />
+    <Property Name="TotalUnits" Type="money" />
+    <Property Name="ApplTfnTax" Type="float" />
+    <Property Name="ApplWHTax" Type="float" />
+    <Property Name="chqGrossAmt" Type="money" />
+    <Property Name="chqFeeAmt" Type="float" />
+    <Property Name="ChqRebateAmt" Type="float" />
+    <Property Name="ChqNetAmt" Type="float" />
+    <Property Name="ChqCount" Type="int" />
+    <Property Name="chqTfnTax" Type="float" />
+    <Property Name="chqWHTax" Type="float" />
+    <Property Name="DESGrossAmt" Type="money" />
+    <Property Name="DESFeeAmt" Type="float" />
+    <Property Name="DESRebateAmt" Type="float" />
+    <Property Name="DESNetAmt" Type="float" />
+    <Property Name="DESCount" Type="int" />
+    <Property Name="DESTfnTax" Type="float" />
+    <Property Name="DESWHTax" Type="float" />
+    <Property Name="TotalGrossAmt" Type="money" />
+    <Property Name="TotalFeeAmt" Type="float" />
+    <Property Name="TotalRebateAmt" Type="float" />
+    <Property Name="TotalNetAmt" Type="float" />
+    <Property Name="TotalCount" Type="int" />
+    <Property Name="TotaltfnTax" Type="float" />
+    <Property Name="TotalWHTax" Type="float" />
+    <Property Name="GSTAmt" Type="money" />
+    <Property Name="chqGSTAmt" Type="float" />
+    <Property Name="DESGSTAmt" Type="float" />
+    <Property Name="TotalGSTAmt" Type="float" />
+    <Property Name="PoolIssuePrice" Type="float" />
+    <Property Name="PoolRdmPrice" Type="float" />
+    <Property Name="PoolApplUnits" Type="float" />
+    <Property Name="PoolRdmUnits" Type="float" />
+    <Property Name="PoolRdmAmt" Type="float" />
+    <Property Name="PoolApplAmt" Type="float" />
+    <Property Name="PoolUnits" Type="float" />
+    <Property Name="PoolNetAmt" Type="money" />
+    <Property Name="PoolABOTD" Type="float" />
+    <Property Name="TotalType" Type="char" MaxLength="4" />
+    <Property Name="PoolMIDPrice" Type="float" />
+    <Property Name="PoolMIDApplUnits" Type="float" />
+    <Property Name="PoolMIDRdmUnits" Type="float" />
+    <Property Name="PoolMIDRdmAmt" Type="float" />
+    <Property Name="PoolMIDApplAmt" Type="float" />
+    <Property Name="FileNote" Type="text" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="InputUserID" Type="varchar" MaxLength="16" />
+    <Property Name="InputDateTime" Type="datetime" />
+    <Property Name="VerifyUserID" Type="varchar" MaxLength="16" />
+    <Property Name="VerifyDatetime" Type="datetime" />
+    <Property Name="ValuationDate" Type="datetime" />
+    <Property Name="InterestPaid" Type="char" MaxLength="1" />
+    <Property Name="ActiveAccounts" Type="bigint" />
+    <Property Name="InterFundTotalUnits" Type="money" />
+  </EntityType>
+  <EntityType Name="tblReport">
+    <Key>
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="ReportId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReportName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tblTransaction">
+    <Key>
+      <PropertyRef Name="Tranid" />
+    </Key>
+    <Property Name="AcctNo" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="ProdNo" Type="int" Nullable="false" />
+    <Property Name="Tranid" Type="bigint" Nullable="false" />
+    <Property Name="BankingDate" Type="datetime" />
+    <Property Name="TranType" Type="int" />
+    <Property Name="TranDesc" Type="char" MaxLength="4" />
+    <Property Name="SubTranDesc" Type="char" MaxLength="4" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Units" Type="money" />
+    <Property Name="UnitPrice" Type="float" />
+    <Property Name="ABOTD" Type="money" />
+    <Property Name="RequestType" Type="char" MaxLength="1" />
+    <Property Name="StatusFlag" Type="char" MaxLength="1" />
+    <Property Name="RootTranID" Type="bigint" />
+    <Property Name="TranDate" Type="datetime" />
+    <Property Name="ApplFeeAmt" Type="money" />
+    <Property Name="ApplfeePerc" Type="money" />
+    <Property Name="CommPerc" Type="money" />
+    <Property Name="CommAmt" Type="money" />
+    <Property Name="TrailPerc" Type="money" />
+    <Property Name="ValuationDate" Type="datetime" />
+    <Property Name="SpecialValuationDate" Type="datetime" />
+    <Property Name="PrintFlag" Type="char" MaxLength="1" />
+    <Property Name="PrintMethod" Type="char" MaxLength="1" />
+    <Property Name="PrintNo" Type="smallint" />
+    <Property Name="PrintDate" Type="datetime" />
+    <Property Name="CCPrintFlag" Type="char" MaxLength="1" />
+    <Property Name="CCPrintMethod" Type="char" MaxLength="1" />
+    <Property Name="CCPrintNo" Type="smallint" />
+    <Property Name="CCPrintDate" Type="datetime" />
+    <Property Name="CustNo" Type="char" MaxLength="20" />
+    <Property Name="Source" Type="char" MaxLength="3" />
+    <Property Name="UserID" Type="char" MaxLength="16" />
+    <Property Name="LastChangedDate" Type="datetime" />
+    <Property Name="AmountPerc" Type="money" />
+    <Property Name="RequestValue" Type="money" />
+    <Property Name="ExtRef1" Type="varchar" MaxLength="20" />
+    <Property Name="ExtRef2" Type="varchar" MaxLength="20" />
+    <Property Name="ExtRef3" Type="varchar" MaxLength="20" />
+    <Property Name="DistMethod" Type="char" MaxLength="1" />
+    <Property Name="FID" Type="money" />
+    <Property Name="TFNTax" Type="money" />
+    <Property Name="WHTax" Type="money" />
+    <Property Name="RebateAmt" Type="money" />
+    <Property Name="RebatePerc" Type="money" />
+    <Property Name="ProcessID" Type="varchar" MaxLength="4" />
+    <Property Name="ProcessType" Type="varchar" MaxLength="4" />
+    <Property Name="TranNote" Type="varchar" MaxLength="100" />
+    <Property Name="BalanceFlag" Type="char" MaxLength="1" />
+    <Property Name="PricingMethod" Type="char" MaxLength="1" />
+    <Property Name="TranNote1" Type="varchar" MaxLength="100" />
+    <Property Name="TranNote2" Type="varchar" MaxLength="100" />
+    <Property Name="GSTAmt" Type="money" />
+    <Property Name="MgmtFeeRebateAmt" Type="money" />
+    <Property Name="MgmtFeeRebateCode" Type="char" MaxLength="4" />
+    <Property Name="ProcessEndDate" Type="datetime" />
+    <Property Name="ProcessStartDate" Type="datetime" />
+    <Property Name="NonCashFlag" Type="char" MaxLength="1" />
+    <Property Name="Campaign" Type="varchar" MaxLength="5" />
+    <Property Name="AdviserRef" Type="varchar" MaxLength="20" />
+    <Property Name="CostUnitsAllocated" Type="float" />
+    <Property Name="CGTAmt" Type="money" />
+    <Property Name="CGTProcessID" Type="varchar" MaxLength="8" />
+    <Property Name="TaxFreeAmt" Type="money" />
+    <Property Name="TaxdeferredAmt" Type="money" />
+    <Property Name="TaxExemption" Type="money" />
+    <Property Name="ReturnofCapital" Type="money" />
+    <Property Name="PAYETaxAmt" Type="money" />
+    <Property Name="PAYGTaxAmt" Type="money" />
+    <Property Name="ContTaxAmt" Type="money" />
+    <Property Name="ExitFeeAmt" Type="money" />
+    <Property Name="FISFlag" Type="char" MaxLength="1" />
+    <Property Name="IndexedCostAmt" Type="money" />
+    <Property Name="LastIndexedDate" Type="datetime" />
+    <Property Name="TranIDRef" Type="bigint" />
+    <Property Name="ACCTNORef" Type="varchar" MaxLength="20" />
+    <Property Name="ExitFeeRequestType" Type="char" MaxLength="1" />
+    <Property Name="RedeemableAmt" Type="money" />
+    <Property Name="RelatedTranID" Type="bigint" />
+    <Property Name="TaxPaid" Type="datetime" />
+    <Property Name="UpfrontRebateAmt" Type="money" />
+    <Property Name="InputUserID" Type="varchar" MaxLength="16" />
+    <Property Name="AuthoriseUserID" Type="varchar" MaxLength="16" />
+    <Property Name="authorisedatetime" Type="datetime" />
+    <Property Name="DeductibleAmt" Type="money" />
+    <Property Name="DeductibleAmtAvail" Type="money" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="ProviderId" />
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProviderId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="155" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblUser_tblRole">
+    <End Role="tblRole" Type="Self.tblRole" Multiplicity="0..1" />
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Admin_MVC5Bootstrap_IntellivueStoreContainer">
+    <EntitySet Name="TblAccountInvOpt" EntityType="Self.TblAccountInvOpt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAdviser" EntityType="Self.tblAdviser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAuthorization" EntityType="Self.tblAuthorization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCustomer" EntityType="Self.tblCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProductPrice" EntityType="Self.tblProductPrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblReport" EntityType="Self.tblReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTransaction" EntityType="Self.tblTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAccount" EntityType="Self.tblAccount" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblAccount].[OfficePersonCode] AS [OfficePersonCode], 
+    [tblAccount].[BlockCode] AS [BlockCode], 
+    [tblAccount].[AcctNo] AS [AcctNo], 
+    [tblAccount].[ProdNo] AS [ProdNo], 
+    [tblAccount].[StatusFlag] AS [StatusFlag], 
+    [tblAccount].[ResidentCode] AS [ResidentCode], 
+    [tblAccount].[ResidentCountryCode] AS [ResidentCountryCode], 
+    [tblAccount].[AcctType] AS [AcctType], 
+    [tblAccount].[DateOpened] AS [DateOpened], 
+    [tblAccount].[DateClosed] AS [DateClosed], 
+    [tblAccount].[EmailAddr1] AS [EmailAddr1], 
+    [tblAccount].[EmailAddr2] AS [EmailAddr2], 
+    [tblAccount].[Addrline1] AS [Addrline1], 
+    [tblAccount].[Addrline2] AS [Addrline2], 
+    [tblAccount].[Addrline3] AS [Addrline3], 
+    [tblAccount].[Addrline4] AS [Addrline4], 
+    [tblAccount].[Suburb] AS [Suburb], 
+    [tblAccount].[State] AS [State], 
+    [tblAccount].[Postcode] AS [Postcode], 
+    [tblAccount].[CountryCode] AS [CountryCode], 
+    [tblAccount].[MailingName] AS [MailingName], 
+    [tblAccount].[CorrName] AS [CorrName], 
+    [tblAccount].[ILCN] AS [ILCN], 
+    [tblAccount].[LenderNo] AS [LenderNo], 
+    [tblAccount].[AdvGroupCode] AS [AdvGroupCode], 
+    [tblAccount].[FileNote] AS [FileNote], 
+    [tblAccount].[BankID] AS [BankID], 
+    [tblAccount].[BankBSB] AS [BankBSB], 
+    [tblAccount].[BankAcctNo] AS [BankAcctNo], 
+    [tblAccount].[BankAcctName] AS [BankAcctName], 
+    [tblAccount].[BankAddr] AS [BankAddr], 
+    [tblAccount].[TelWithdrawal] AS [TelWithdrawal], 
+    [tblAccount].[TFNRule] AS [TFNRule], 
+    [tblAccount].[ABN] AS [ABN], 
+    [tblAccount].[DateLastChanged] AS [DateLastChanged], 
+    [tblAccount].[AcctName] AS [AcctName], 
+    [tblAccount].[AcctSortingName] AS [AcctSortingName], 
+    [tblAccount].[CCAdviserFlag] AS [CCAdviserFlag], 
+    [tblAccount].[TaxExempt] AS [TaxExempt], 
+    [tblAccount].[TaxExemptCode] AS [TaxExemptCode], 
+    [tblAccount].[ChildDOB] AS [ChildDOB], 
+    [tblAccount].[TelSwitching] AS [TelSwitching], 
+    [tblAccount].[TelDeposit] AS [TelDeposit], 
+    [tblAccount].[Consent] AS [Consent], 
+    [tblAccount].[ExternalNo1] AS [ExternalNo1], 
+    [tblAccount].[ExternalNo2] AS [ExternalNo2], 
+    [tblAccount].[ACN] AS [ACN], 
+    [tblAccount].[PIN] AS [PIN], 
+    [tblAccount].[PINPostedDate] AS [PINPostedDate], 
+    [tblAccount].[PINFlag] AS [PINFlag], 
+    [tblAccount].[TempPIN] AS [TempPIN], 
+    [tblAccount].[TempTrustee] AS [TempTrustee], 
+    [tblAccount].[TempABN] AS [TempABN], 
+    [tblAccount].[WorkFax] AS [WorkFax], 
+    [tblAccount].[CorrMethod] AS [CorrMethod], 
+    [tblAccount].[ExmptTaxSec128B] AS [ExmptTaxSec128B], 
+    [tblAccount].[TrusteeCapacity] AS [TrusteeCapacity], 
+    [tblAccount].[ExmptOtherIncomeTaxSec23] AS [ExmptOtherIncomeTaxSec23], 
+    [tblAccount].[ExmptOtherIncomeIntOrg] AS [ExmptOtherIncomeIntOrg], 
+    [tblAccount].[NonResidentFromDate] AS [NonResidentFromDate], 
+    [tblAccount].[NonResidentToDate] AS [NonResidentToDate], 
+    [tblAccount].[InterfundAcctFlag] AS [InterfundAcctFlag], 
+    [tblAccount].[InterfundAcctprodNo] AS [InterfundAcctprodNo], 
+    [tblAccount].[NoPin] AS [NoPin], 
+    [tblAccount].[LastDocNo] AS [LastDocNo], 
+    [tblAccount].[ASFFee] AS [ASFFee], 
+    [tblAccount].[ASFRate] AS [ASFRate], 
+    [tblAccount].[ChequeBookReq] AS [ChequeBookReq], 
+    [tblAccount].[DepositBookReq] AS [DepositBookReq], 
+    [tblAccount].[DebitCardReq] AS [DebitCardReq], 
+    [tblAccount].[ChequeBookSize] AS [ChequeBookSize], 
+    [tblAccount].[LastChequeNum] AS [LastChequeNum], 
+    [tblAccount].[ChequeBookOrdered] AS [ChequeBookOrdered], 
+    [tblAccount].[DepositBookOrdered] AS [DepositBookOrdered], 
+    [tblAccount].[ProdBSB] AS [ProdBSB], 
+    [tblAccount].[PowerType] AS [PowerType], 
+    [tblAccount].[FISFlag] AS [FISFlag], 
+    [tblAccount].[ASFRejectionCounted] AS [ASFRejectionCounted], 
+    [tblAccount].[PrintFlag] AS [PrintFlag], 
+    [tblAccount].[ReportTypes] AS [ReportTypes], 
+    [tblAccount].[DebitCardOrdered] AS [DebitCardOrdered], 
+    [tblAccount].[PersonalContrib] AS [PersonalContrib], 
+    [tblAccount].[EmployerContrib] AS [EmployerContrib], 
+    [tblAccount].[SalarySacrifice] AS [SalarySacrifice], 
+    [tblAccount].[SpouseContrib] AS [SpouseContrib], 
+    [tblAccount].[PersonalContribTaxDeduction] AS [PersonalContribTaxDeduction], 
+    [tblAccount].[Indexation] AS [Indexation], 
+    [tblAccount].[IndexationRate] AS [IndexationRate], 
+    [tblAccount].[CommissionOption] AS [CommissionOption], 
+    [tblAccount].[RCV] AS [RCV], 
+    [tblAccount].[Term] AS [Term], 
+    [tblAccount].[TermType] AS [TermType], 
+    [tblAccount].[GuaranteedTerm] AS [GuaranteedTerm], 
+    [tblAccount].[JointAnnuitantDecreasePerc] AS [JointAnnuitantDecreasePerc], 
+    [tblAccount].[CompliantFlag] AS [CompliantFlag], 
+    [tblAccount].[ETPFlag] AS [ETPFlag], 
+    [tblAccount].[IsServicePensionAge] AS [IsServicePensionAge], 
+    [tblAccount].[PaymentFreq] AS [PaymentFreq], 
+    [tblAccount].[PaymentType] AS [PaymentType], 
+    [tblAccount].[AnnualIntRatePerc] AS [AnnualIntRatePerc], 
+    [tblAccount].[AnnualPaymentAmt] AS [AnnualPaymentAmt], 
+    [tblAccount].[QuoteNo] AS [QuoteNo], 
+    [tblAccount].[RelevantNo] AS [RelevantNo], 
+    [tblAccount].[UnDeductPP] AS [UnDeductPP], 
+    [tblAccount].[PurchasePrice] AS [PurchasePrice], 
+    [tblAccount].[NextPayDate] AS [NextPayDate], 
+    [tblAccount].[NextReviewDate] AS [NextReviewDate], 
+    [tblAccount].[NextPaymentAmt] AS [NextPaymentAmt], 
+    [tblAccount].[InitialReviewDate] AS [InitialReviewDate], 
+    [tblAccount].[AnnualDeductibleAmt] AS [AnnualDeductibleAmt], 
+    [tblAccount].[CommutableFlag] AS [CommutableFlag], 
+    [tblAccount].[BadgeId] AS [BadgeId], 
+    [tblAccount].[ReturnMail] AS [ReturnMail], 
+    [tblAccount].[GuarEarnRateWithoutInflation] AS [GuarEarnRateWithoutInflation], 
+    [tblAccount].[ExtensionOfPolicy] AS [ExtensionOfPolicy], 
+    [tblAccount].[ContinuityCertReturned] AS [ContinuityCertReturned], 
+    [tblAccount].[DeductibleAdjustmentAmt] AS [DeductibleAdjustmentAmt], 
+    [tblAccount].[ExternalNo3] AS [ExternalNo3], 
+    [tblAccount].[IncomeAdjustmentAmt] AS [IncomeAdjustmentAmt], 
+    [tblAccount].[InvestFacility] AS [InvestFacility]
+    FROM [dbo].[tblAccount] AS [tblAccount]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblCode" EntityType="Self.tblCode" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblCode].[CodeType] AS [CodeType], 
+    [tblCode].[Code] AS [Code], 
+    [tblCode].[CodeDesc] AS [CodeDesc], 
+    [tblCode].[CodeReportShortDesc] AS [CodeReportShortDesc], 
+    [tblCode].[CodeSensivity] AS [CodeSensivity], 
+    [tblCode].[CodeDisplaySeq] AS [CodeDisplaySeq], 
+    [tblCode].[CodeDisplaySeqNo] AS [CodeDisplaySeqNo], 
+    [tblCode].[CodeDefValue] AS [CodeDefValue], 
+    [tblCode].[CodeLength] AS [CodeLength], 
+    [tblCode].[LoadType] AS [LoadType], 
+    [tblCode].[CodeSeverity] AS [CodeSeverity]
+    FROM [dbo].[tblCode] AS [tblCode]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblCountryPostCode" EntityType="Self.tblCountryPostCode" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblCountryPostCode].[CountryCode] AS [CountryCode], 
+    [tblCountryPostCode].[Postcode] AS [Postcode], 
+    [tblCountryPostCode].[Locality] AS [Locality], 
+    [tblCountryPostCode].[State] AS [State], 
+    [tblCountryPostCode].[Comments] AS [Comments], 
+    [tblCountryPostCode].[DeliveryOffice] AS [DeliveryOffice], 
+    [tblCountryPostCode].[PresortIndicator] AS [PresortIndicator], 
+    [tblCountryPostCode].[ParcelZone] AS [ParcelZone], 
+    [tblCountryPostCode].[BSPnumber] AS [BSPnumber], 
+    [tblCountryPostCode].[BSPname] AS [BSPname], 
+    [tblCountryPostCode].[Category] AS [Category]
+    FROM [dbo].[tblCountryPostCode] AS [tblCountryPostCode]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblCubeManagement" EntityType="Self.tblCubeManagement" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblCubeManagement].[ID] AS [ID], 
+    [tblCubeManagement].[CubeName] AS [CubeName], 
+    [tblCubeManagement].[CubePath] AS [CubePath]
+    FROM [dbo].[tblCubeManagement] AS [tblCubeManagement]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblCustomerAccount" EntityType="Self.tblCustomerAccount" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblCustomerAccount].[CustID] AS [CustID], 
+    [tblCustomerAccount].[OrderNo] AS [OrderNo], 
+    [tblCustomerAccount].[AcctNo] AS [AcctNo], 
+    [tblCustomerAccount].[ProdNo] AS [ProdNo], 
+    [tblCustomerAccount].[TaxFileNo] AS [TaxFileNo], 
+    [tblCustomerAccount].[TFNStatus] AS [TFNStatus], 
+    [tblCustomerAccount].[DateCreated] AS [DateCreated], 
+    [tblCustomerAccount].[DateTFN] AS [DateTFN], 
+    [tblCustomerAccount].[PrimaryOwnerFlag] AS [PrimaryOwnerFlag], 
+    [tblCustomerAccount].[RelationshipCode] AS [RelationshipCode], 
+    [tblCustomerAccount].[SignatoryFlag] AS [SignatoryFlag], 
+    [tblCustomerAccount].[DateLastChanged] AS [DateLastChanged], 
+    [tblCustomerAccount].[ABN] AS [ABN], 
+    [tblCustomerAccount].[TaxExemptCode] AS [TaxExemptCode], 
+    [tblCustomerAccount].[ChildDOB] AS [ChildDOB], 
+    [tblCustomerAccount].[NonResidentFromDate] AS [NonResidentFromDate], 
+    [tblCustomerAccount].[NonResidentToDate] AS [NonResidentToDate], 
+    [tblCustomerAccount].[ExmptTaxSec128B] AS [ExmptTaxSec128B], 
+    [tblCustomerAccount].[TrusteeCapacity] AS [TrusteeCapacity], 
+    [tblCustomerAccount].[ExmptOtherIncomeTaxSec23] AS [ExmptOtherIncomeTaxSec23], 
+    [tblCustomerAccount].[ExmptOtherIncomeIntOrg] AS [ExmptOtherIncomeIntOrg], 
+    [tblCustomerAccount].[ResidentCode] AS [ResidentCode], 
+    [tblCustomerAccount].[ResidentCountrycode] AS [ResidentCountrycode], 
+    [tblCustomerAccount].[ABNStatus] AS [ABNStatus], 
+    [tblCustomerAccount].[ProdBSB] AS [ProdBSB], 
+    [tblCustomerAccount].[TaxRebateAmt] AS [TaxRebateAmt], 
+    [tblCustomerAccount].[ClaimTaxFreeFlag] AS [ClaimTaxFreeFlag], 
+    [tblCustomerAccount].[TFNExemptReason] AS [TFNExemptReason], 
+    [tblCustomerAccount].[TFNPermission] AS [TFNPermission], 
+    [tblCustomerAccount].[AustResTaxFlag] AS [AustResTaxFlag], 
+    [tblCustomerAccount].[FlatTaxRate] AS [FlatTaxRate], 
+    [tblCustomerAccount].[FlatRateExpDate] AS [FlatRateExpDate], 
+    [tblCustomerAccount].[TaxExemptFlag] AS [TaxExemptFlag], 
+    [tblCustomerAccount].[ClaimETPRebateFlag] AS [ClaimETPRebateFlag], 
+    [tblCustomerAccount].[ETPReasonCode] AS [ETPReasonCode], 
+    [tblCustomerAccount].[SATOFlag] AS [SATOFlag], 
+    [tblCustomerAccount].[SATOCat] AS [SATOCat], 
+    [tblCustomerAccount].[MedicareExemptType] AS [MedicareExemptType], 
+    [tblCustomerAccount].[ETPRebateProportion] AS [ETPRebateProportion], 
+    [tblCustomerAccount].[DeductibleAmt] AS [DeductibleAmt], 
+    [tblCustomerAccount].[FamilyTaxBenefit] AS [FamilyTaxBenefit], 
+    [tblCustomerAccount].[FinSupplementDebt] AS [FinSupplementDebt], 
+    [tblCustomerAccount].[HECS] AS [HECS], 
+    [tblCustomerAccount].[SpecRebates] AS [SpecRebates], 
+    [tblCustomerAccount].[PayBasis] AS [PayBasis], 
+    [tblCustomerAccount].[RebatableProportion] AS [RebatableProportion]
+    FROM [dbo].[tblCustomerAccount] AS [tblCustomerAccount]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblProductTotal" EntityType="Self.tblProductTotal" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblProductTotal].[ProdNo] AS [ProdNo], 
+    [tblProductTotal].[ParentProdNo] AS [ParentProdNo], 
+    [tblProductTotal].[ProcessType] AS [ProcessType], 
+    [tblProductTotal].[EffectiveDate] AS [EffectiveDate], 
+    [tblProductTotal].[ApplGrossAmt] AS [ApplGrossAmt], 
+    [tblProductTotal].[ApplFeeAmt] AS [ApplFeeAmt], 
+    [tblProductTotal].[ApplRebateAmt] AS [ApplRebateAmt], 
+    [tblProductTotal].[ApplNetAmt] AS [ApplNetAmt], 
+    [tblProductTotal].[ApplCount] AS [ApplCount], 
+    [tblProductTotal].[ApplUnits] AS [ApplUnits], 
+    [tblProductTotal].[RdmGrossAmt] AS [RdmGrossAmt], 
+    [tblProductTotal].[RdmNetAmt] AS [RdmNetAmt], 
+    [tblProductTotal].[RdmCount] AS [RdmCount], 
+    [tblProductTotal].[RdmUnits] AS [RdmUnits], 
+    [tblProductTotal].[SwitchInGrossAmt] AS [SwitchInGrossAmt], 
+    [tblProductTotal].[SwitchInFeeAmt] AS [SwitchInFeeAmt], 
+    [tblProductTotal].[SwitchInRebateAmt] AS [SwitchInRebateAmt], 
+    [tblProductTotal].[SwitchInNetAmt] AS [SwitchInNetAmt], 
+    [tblProductTotal].[SwitchInCount] AS [SwitchInCount], 
+    [tblProductTotal].[SwitchInUnits] AS [SwitchInUnits], 
+    [tblProductTotal].[SwitchOutGrossAmt] AS [SwitchOutGrossAmt], 
+    [tblProductTotal].[SwitchOutNetAmt] AS [SwitchOutNetAmt], 
+    [tblProductTotal].[SwitchOutCount] AS [SwitchOutCount], 
+    [tblProductTotal].[SwitchOutUnits] AS [SwitchOutUnits], 
+    [tblProductTotal].[TotalUnits] AS [TotalUnits], 
+    [tblProductTotal].[ApplTfnTax] AS [ApplTfnTax], 
+    [tblProductTotal].[ApplWHTax] AS [ApplWHTax], 
+    [tblProductTotal].[chqGrossAmt] AS [chqGrossAmt], 
+    [tblProductTotal].[chqFeeAmt] AS [chqFeeAmt], 
+    [tblProductTotal].[ChqRebateAmt] AS [ChqRebateAmt], 
+    [tblProductTotal].[ChqNetAmt] AS [ChqNetAmt], 
+    [tblProductTotal].[ChqCount] AS [ChqCount], 
+    [tblProductTotal].[chqTfnTax] AS [chqTfnTax], 
+    [tblProductTotal].[chqWHTax] AS [chqWHTax], 
+    [tblProductTotal].[DESGrossAmt] AS [DESGrossAmt], 
+    [tblProductTotal].[DESFeeAmt] AS [DESFeeAmt], 
+    [tblProductTotal].[DESRebateAmt] AS [DESRebateAmt], 
+    [tblProductTotal].[DESNetAmt] AS [DESNetAmt], 
+    [tblProductTotal].[DESCount] AS [DESCount], 
+    [tblProductTotal].[DESTfnTax] AS [DESTfnTax], 
+    [tblProductTotal].[DESWHTax] AS [DESWHTax], 
+    [tblProductTotal].[TotalGrossAmt] AS [TotalGrossAmt], 
+    [tblProductTotal].[TotalFeeAmt] AS [TotalFeeAmt], 
+    [tblProductTotal].[TotalRebateAmt] AS [TotalRebateAmt], 
+    [tblProductTotal].[TotalNetAmt] AS [TotalNetAmt], 
+    [tblProductTotal].[TotalCount] AS [TotalCount], 
+    [tblProductTotal].[TotaltfnTax] AS [TotaltfnTax], 
+    [tblProductTotal].[TotalWHTax] AS [TotalWHTax], 
+    [tblProductTotal].[GSTAmt] AS [GSTAmt], 
+    [tblProductTotal].[chqGSTAmt] AS [chqGSTAmt], 
+    [tblProductTotal].[DESGSTAmt] AS [DESGSTAmt], 
+    [tblProductTotal].[TotalGSTAmt] AS [TotalGSTAmt], 
+    [tblProductTotal].[PoolIssuePrice] AS [PoolIssuePrice], 
+    [tblProductTotal].[PoolRdmPrice] AS [PoolRdmPrice], 
+    [tblProductTotal].[PoolApplUnits] AS [PoolApplUnits], 
+    [tblProductTotal].[PoolRdmUnits] AS [PoolRdmUnits], 
+    [tblProductTotal].[PoolRdmAmt] AS [PoolRdmAmt], 
+    [tblProductTotal].[PoolApplAmt] AS [PoolApplAmt], 
+    [tblProductTotal].[PoolUnits] AS [PoolUnits], 
+    [tblProductTotal].[PoolNetAmt] AS [PoolNetAmt], 
+    [tblProductTotal].[PoolABOTD] AS [PoolABOTD], 
+    [tblProductTotal].[TotalType] AS [TotalType], 
+    [tblProductTotal].[PoolMIDPrice] AS [PoolMIDPrice], 
+    [tblProductTotal].[PoolMIDApplUnits] AS [PoolMIDApplUnits], 
+    [tblProductTotal].[PoolMIDRdmUnits] AS [PoolMIDRdmUnits], 
+    [tblProductTotal].[PoolMIDRdmAmt] AS [PoolMIDRdmAmt], 
+    [tblProductTotal].[PoolMIDApplAmt] AS [PoolMIDApplAmt], 
+    [tblProductTotal].[FileNote] AS [FileNote], 
+    [tblProductTotal].[StatusFlag] AS [StatusFlag], 
+    [tblProductTotal].[InputUserID] AS [InputUserID], 
+    [tblProductTotal].[InputDateTime] AS [InputDateTime], 
+    [tblProductTotal].[VerifyUserID] AS [VerifyUserID], 
+    [tblProductTotal].[VerifyDatetime] AS [VerifyDatetime], 
+    [tblProductTotal].[ValuationDate] AS [ValuationDate], 
+    [tblProductTotal].[InterestPaid] AS [InterestPaid], 
+    [tblProductTotal].[ActiveAccounts] AS [ActiveAccounts], 
+    [tblProductTotal].[InterFundTotalUnits] AS [InterFundTotalUnits]
+    FROM [dbo].[tblProductTotal] AS [tblProductTotal]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_tblUser_tblRole" Association="Self.FK_tblUser_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblUser" EntitySet="tblUser" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
