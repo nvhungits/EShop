@@ -33,25 +33,9 @@ namespace ITL.Domain
             menu.Add(new Navbar { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
 
             //Add Navigation Menu
-            menu.Add(new Navbar { Id = 19, nameOption = "Users", controller = "Home", action = "Users", imageClass = "fa fa-users fa-fw", status = true, isParent = false, parentId = 0 });
+            menu.Add(new Navbar { Id = 99910, nameOption = "User Administration", imageClass = "fa fa-users fa-fw", status = true, isParent = true, parentId = 0 });
+            menu.Add(new Navbar { Id = 99911, nameOption = "Users", controller="Administration", action="UserList" , status = true, isParent = false, parentId = 99910 });
             return menu.ToList();
-        }
-
-        public IEnumerable<User> userItems()
-        {
-            string con = ConfigurationManager.ConnectionStrings["DBITL"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
-            connection.Open();
-
-            SqlCommand cmdStr = new SqlCommand("Select * from Table", connection);
-            SqlDataReader dr = cmdStr.ExecuteReader();
-            dr.Read();
-
-            var userList = new List<User>();
-
-            userList.Add(new User { Name = dr[0].ToString()});
-
-            return userList.ToList();
         }
     }
 }
