@@ -1021,6 +1021,7 @@
     <Content Include="Views\Administrator\ContentManagement.cshtml" />
     <Content Include="Views\Cube\Management.cshtml" />
     <Content Include="Views\Cube\Viewer.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

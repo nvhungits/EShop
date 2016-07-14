@@ -13,6 +13,11 @@ namespace Admin_MVC5Bootstrap_Intellivue.Controllers
             return View();
         }
 
+        public ActionResult Dashboard()
+        {
+            return View("Dashboard");
+        }
+
         public ActionResult FlotCharts()
         {
             return View("FlotCharts");
