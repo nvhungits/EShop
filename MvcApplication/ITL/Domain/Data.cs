@@ -1,4 +1,5 @@
-﻿using ITL.Models;
+﻿using ITL.Controllers;
+using ITL.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -32,9 +33,23 @@ namespace ITL.Domain
             menu.Add(new Navbar { Id = 17, nameOption = "Blank Page", controller = "Home", action = "Blank", status = true, isParent = false, parentId = 16 });
             menu.Add(new Navbar { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
 
-            //Add Navigation Menu
-            menu.Add(new Navbar { Id = 99910, nameOption = "User Administration", imageClass = "fa fa-users fa-fw", status = true, isParent = true, parentId = 0 });
-            menu.Add(new Navbar { Id = 99911, nameOption = "Users", controller="Administration", action="UserList" , status = true, isParent = false, parentId = 99910 });
+            int ID = 19;
+
+            ApplicationMenuController app_menu_ctrl = new ApplicationMenuController();
+            List<ApplicationMenuModel> app_menu_list = app_menu_ctrl.getAll();
+            for (int i = 0; i < app_menu_list.Count; i++)
+            {
+                int ID_temp = ID;
+                menu.Add(new Navbar { Id = ID_temp, nameOption = app_menu_list[i].Title, imageClass = "fa fa-th-list fa-fw", status = app_menu_list[i].Active == 1 ? true : false, isParent = true, parentId = 0 }); ID++;
+                ModuleController module_ctrl = new ModuleController();
+                List<ModuleModel> module_list = module_ctrl.getByApplicationMenuId(app_menu_list[i].SysId);
+                for (int j = 0; j < module_list.Count; j++)
+                {
+                    menu.Add(new Navbar { Id = ID, nameOption = module_list[j].Title, controller = app_menu_list[i].Controller, action = module_list[j].Action, status = module_list[j].Active == 1 ? true : false, isParent = false, parentId = ID_temp }); ID++;
+                }
+                
+            }
+
             return menu.ToList();
         }
     }
