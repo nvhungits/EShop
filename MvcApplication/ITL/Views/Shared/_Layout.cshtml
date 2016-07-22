@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>ITL Admin</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -31,7 +31,7 @@
         @Html.Action("Index", "Navbar")
         
         <div id="page-wrapper">
-            @RenderBody()          
+           @RenderBody()          
         </div>
         <!-- /#page-wrapper -->
     </div>
@@ -47,14 +47,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="@Url.Content("~/Scripts/sb-admin-2.js")"></script>
 
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-        $(document).ready(function () {
-            $('#dataTables-example').DataTable({
-                responsive: true
-            });
-        });
-    </script>
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>

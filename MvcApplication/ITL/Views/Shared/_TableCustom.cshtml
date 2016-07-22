@@ -1,0 +1,127 @@
+﻿
+@{
+    string PageHeader = this.ViewData.ContainsKey("PageHeader") ? this.ViewData["PageHeader"].ToString() : string.Empty;
+    string TableID = this.ViewData.ContainsKey("TableID") ? this.ViewData["TableID"].ToString() : string.Empty;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@PageHeader</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <button type="button" class="btn btn-primary">New</button>
+                <button type="button" class="btn btn-danger disabled">Remove</button>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="@TableID">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Created</th>
+                                <th>Updated(s)</th>
+                                <th>Active</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-info btn-circle">
+                                            <!--<i class="fa fa-check"></i>-->
+                                        </button>
+                                    </td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Created</td>
+                                    <td>@item.Updated</td>
+                                    <td align="center">
+                                        @{
+                                String active = "active" + item.SysId;
+                                String edit = "edit" + item.SysId;
+                                String remove = "remove" + item.SysId;
+                                <button type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#@active">
+                                    @if (item.Active == 1)
+                                    {
+                                        <i class="fa fa-check"></i>
+                                    }
+                                </button>
+                                if (item.Active == 0)
+                                {
+                                                <!-- Modal -->
+                                            <div class="modal fade" id="@active" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                            <h4 class="modal-title" id="myModalLabel">Active DialogBox</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Do you want to active it?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary">Yes</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                }
+                                        }
+
+                                    </td>
+                                    <td align="center">
+                                        <button class="btn btn-success btn-circle" data-toggle="modal" data-target="#@edit"><i class="fa fa-link"></i></button>
+                                        <button class="btn btn-warning btn-circle" data-toggle="modal" data-target="#@remove"><i class="fa fa-times"></i></button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="@remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Remove DialogBox</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Do you want to remove it?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary">Yes</button>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+                    <script>
+                        $(document).ready(function () {
+                            $('#@TableID').DataTable({
+                                responsive: true
+                            });
+                        });
+                    </script>
+                </div>
+
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>

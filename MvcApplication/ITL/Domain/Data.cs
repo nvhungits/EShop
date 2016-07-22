@@ -14,7 +14,7 @@ namespace ITL.Domain
         public IEnumerable<Navbar> navbarItems()
         {
             var menu = new List<Navbar>();
-            menu.Add(new Navbar { Id = 1, nameOption = "Dashboard", controller = "Home", action = "Index", imageClass = "fa fa-dashboard fa-fw", status = true, isParent = false, parentId = 0 });
+            menu.Add(new Navbar { Id = 1, nameOption = "Dashboard", controller = "Home", action = ".", imageClass = "fa fa-dashboard fa-fw", status = true, isParent = false, parentId = 0 });
             menu.Add(new Navbar { Id = 2, nameOption = "Charts", imageClass = "fa fa-bar-chart-o fa-fw", status = true, isParent = true, parentId = 0 });
             menu.Add(new Navbar { Id = 3, nameOption = "Flot Charts", controller = "Home", action = "FlotCharts", status = true, isParent = false, parentId = 2 });
             menu.Add(new Navbar { Id = 4, nameOption = "Morris.js Charts", controller = "Home", action = "MorrisCharts", status = true, isParent = false, parentId = 2 });
@@ -39,15 +39,18 @@ namespace ITL.Domain
             List<ApplicationMenuModel> app_menu_list = app_menu_ctrl.getAll();
             for (int i = 0; i < app_menu_list.Count; i++)
             {
-                int ID_temp = ID;
-                menu.Add(new Navbar { Id = ID_temp, nameOption = app_menu_list[i].Title, imageClass = "fa fa-th-list fa-fw", status = app_menu_list[i].Active == 1 ? true : false, isParent = true, parentId = 0 }); ID++;
-                ModuleController module_ctrl = new ModuleController();
-                List<ModuleModel> module_list = module_ctrl.getByApplicationMenuId(app_menu_list[i].SysId);
-                for (int j = 0; j < module_list.Count; j++)
+                if (app_menu_list[i].Active == 1)
                 {
-                    menu.Add(new Navbar { Id = ID, nameOption = module_list[j].Title, controller = app_menu_list[i].Controller, action = module_list[j].Action, status = module_list[j].Active == 1 ? true : false, isParent = false, parentId = ID_temp }); ID++;
+                    int ID_temp = ID;
+                    menu.Add(new Navbar { Id = ID_temp, nameOption = app_menu_list[i].Title, imageClass = "fa fa-th-list fa-fw", status = app_menu_list[i].Active == 1 ? true : false, isParent = true, parentId = 0 }); ID++;
+                    ModuleController module_ctrl = new ModuleController();
+                    List<ModuleModel> module_list = module_ctrl.getByApplicationMenuId(app_menu_list[i].SysId);
+                    for (int j = 0; j < module_list.Count; j++)
+                    {
+                        if (module_list[j].Active == 1)
+                            menu.Add(new Navbar { Id = ID, nameOption = module_list[j].Title, controller = app_menu_list[i].Controller, action = module_list[j].Action, status = module_list[j].Active == 1 ? true : false, isParent = false, parentId = ID_temp }); ID++;
+                    }
                 }
-                
             }
 
             return menu.ToList();

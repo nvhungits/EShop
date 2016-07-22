@@ -1,0 +1,14 @@
+﻿@using System.Web.Mvc
+@using ITL.Controllers;
+@{
+    ViewBag.Title = "ApplicationMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial(
+    "_TableCustom",
+    new ApplicationMenuController().getAll(),
+    new ViewDataDictionary {
+        { "PageHeader", "Application Menu" } ,
+        { "TableID", "ApplicationMenu" }
+    }
+)

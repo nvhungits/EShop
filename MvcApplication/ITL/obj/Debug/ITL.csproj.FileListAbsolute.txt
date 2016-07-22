@@ -21,7 +21,6 @@ C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\System.Web.W
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\System.Web.WebPages.Razor.xml
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\Antlr3.Runtime.pdb
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\Newtonsoft.Json.xml
-C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\obj\Debug\ITL.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\obj\Debug\sb-admin-2.Web.dll
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\obj\Debug\sb-admin-2.Web.pdb
 D:\EShopV\trunk\MvcApplication\ITL\bin\sb-admin-2.Web.dll.config
@@ -54,3 +53,7 @@ D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.dll
 D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.xml
 D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.xml
 D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\ITL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.xml
