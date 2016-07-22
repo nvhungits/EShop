@@ -12,17 +12,19 @@ namespace ITL.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Dictionary
     {
         public string SysId { get; set; }
-        public string Name { get; set; }
-        public string UserID { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public string Gender { get; set; }
-        public string Company { get; set; }
-        public string Location { get; set; }
-        public string Department { get; set; }
+        public string TableRef { get; set; }
+        public string ColumnName { get; set; }
+        public string Type { get; set; }
+        public string Reference { get; set; }
+        public string DefaultValue { get; set; }
+        public Nullable<int> Display { get; set; }
+        public string ColumnLabel { get; set; }
+        public Nullable<int> Mandatory { get; set; }
+        public Nullable<int> MaxLength { get; set; }
+        public Nullable<int> ReadOnly { get; set; }
         public Nullable<System.DateTime> Created { get; set; }
         public Nullable<System.DateTime> Updated { get; set; }
         public Nullable<int> Active { get; set; }

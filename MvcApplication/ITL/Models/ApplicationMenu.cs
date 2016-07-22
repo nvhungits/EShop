@@ -12,19 +12,19 @@ namespace ITL.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class ApplicationMenu
     {
         public string SysId { get; set; }
+        public string Title { get; set; }
         public string Name { get; set; }
-        public string UserID { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public string Gender { get; set; }
-        public string Company { get; set; }
-        public string Location { get; set; }
-        public string Department { get; set; }
+        public string Hint { get; set; }
+        public string Desciption { get; set; }
+        public Nullable<int> OrderSQ { get; set; }
+        public string Roles { get; set; }
+        public string Category { get; set; }
         public Nullable<System.DateTime> Created { get; set; }
         public Nullable<System.DateTime> Updated { get; set; }
         public Nullable<int> Active { get; set; }
+        public string Controller { get; set; }
     }
 }
