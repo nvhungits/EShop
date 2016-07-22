@@ -7,18 +7,20 @@ using ITL.Models;
 
 namespace ITL.Controllers
 {
-    public class UserController : Controller
+    public class ApplicationMenuController : Controller
     {
+        ApplicationMenuModel application_menu_object = new ApplicationMenuModel();
+
         //
-        // GET: /User/
+        // GET: /ApplicationMenu/
         public ActionResult Index()
         {
             return View();
         }
-        User u = new User();
-        public IEnumerable<User> getAllUser()
+
+        public List<ApplicationMenuModel> getAll()
         {
-            return u.getAllUser();
+            return application_menu_object.getAll();
         }
 	}
 }
