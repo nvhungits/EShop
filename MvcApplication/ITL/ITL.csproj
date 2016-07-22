@@ -39,10 +39,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -111,17 +119,46 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\ApplicationMenuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ApplicationMenu.cs">
+      <DependentUpon>Model_ITL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApplicationMenuModel.cs" />
+    <Compile Include="Models\ConnectDB.cs" />
+    <Compile Include="Models\Dictionary.cs">
+      <DependentUpon>Model_ITL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_ITL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ITL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_ITL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ITL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_ITL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ITL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Module.cs">
+      <DependentUpon>Model_ITL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuleModel.cs" />
     <Compile Include="Models\Navbar.cs" />
-    <Compile Include="Models\sysmodel.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model_ITL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -868,6 +905,23 @@
     <Content Include="Content\less\mixins.less" />
     <Content Include="Content\less\sb-admin-2.less" />
     <Content Include="Content\less\variables.less" />
+    <EntityDeploy Include="Models\Model_ITL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_ITL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model_ITL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_ITL.edmx</DependentUpon>
+      <LastGenOutput>Model_ITL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model_ITL.edmx.diagram">
+      <DependentUpon>Model_ITL.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model_ITL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_ITL.edmx</DependentUpon>
+      <LastGenOutput>Model_ITL.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\flot-data.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -909,10 +963,11 @@
     <Content Include="Views\Home\Grid.cshtml" />
     <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Administration\UserList.cshtml" />
+    <Content Include="Views\ApplicationMenu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Module\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -920,6 +975,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

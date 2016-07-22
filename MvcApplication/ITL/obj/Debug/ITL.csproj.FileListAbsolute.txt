@@ -49,3 +49,8 @@ D:\EShopV\trunk\MvcApplication\ITL\bin\Antlr3.Runtime.pdb
 D:\EShopV\trunk\MvcApplication\ITL\bin\Newtonsoft.Json.xml
 D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\sb-admin-2.Web.dll
 D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\sb-admin-2.Web.pdb
+D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.dll
+D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.dll
+D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.xml
+D:\EShopV\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.xml
+D:\EShopV\trunk\MvcApplication\ITL\obj\Debug\ITL.csprojResolveAssemblyReference.cache
