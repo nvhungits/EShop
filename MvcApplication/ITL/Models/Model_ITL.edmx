@@ -75,11 +75,27 @@
           <Property Name="Updated" Type="datetime" />
           <Property Name="Active" Type="int" />
         </EntityType>
+        <EntityType Name="ViewRule">
+          <Key>
+            <PropertyRef Name="SysId" />
+          </Key>
+          <Property Name="SysId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Active" Type="int" />
+          <Property Name="TableRef" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColumnName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColumnLabel" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderSQ" Type="int" />
+        </EntityType>
         <EntityContainer Name="ITLModelStoreContainer">
           <EntitySet Name="ApplicationMenu" EntityType="Self.ApplicationMenu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dictionary" EntityType="Self.Dictionary" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ViewRule" EntityType="Self.ViewRule" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -90,6 +106,7 @@
           <EntitySet Name="Dictionary" EntityType="ITLModel.Dictionary" />
           <EntitySet Name="Module" EntityType="ITLModel.Module" />
           <EntitySet Name="User" EntityType="ITLModel.User" />
+          <EntitySet Name="ViewRules" EntityType="ITLModel.ViewRule" />
         </EntityContainer>
         <EntityType Name="ApplicationMenu">
           <Key>
@@ -160,6 +177,21 @@
           <Property Name="Created" Type="DateTime" Precision="3" />
           <Property Name="Updated" Type="DateTime" Precision="3" />
           <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ViewRule">
+          <Key>
+            <PropertyRef Name="SysId" />
+          </Key>
+          <Property Name="SysId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Updated" Type="DateTime" Precision="3" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Int32" />
+          <Property Name="TableRef" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColumnName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColumnLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderSQ" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -237,6 +269,22 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SysId" ColumnName="SysId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewRules">
+            <EntityTypeMapping TypeName="ITLModel.ViewRule">
+              <MappingFragment StoreEntitySet="ViewRule">
+                <ScalarProperty Name="OrderSQ" ColumnName="OrderSQ" />
+                <ScalarProperty Name="ColumnLabel" ColumnName="ColumnLabel" />
+                <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TableRef" ColumnName="TableRef" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
                 <ScalarProperty Name="SysId" ColumnName="SysId" />
               </MappingFragment>
             </EntityTypeMapping>

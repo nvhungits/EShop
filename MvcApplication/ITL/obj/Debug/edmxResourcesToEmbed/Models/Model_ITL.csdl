@@ -5,6 +5,7 @@
     <EntitySet Name="Dictionary" EntityType="ITLModel.Dictionary" />
     <EntitySet Name="Module" EntityType="ITLModel.Module" />
     <EntitySet Name="User" EntityType="ITLModel.User" />
+    <EntitySet Name="ViewRules" EntityType="ITLModel.ViewRule" />
   </EntityContainer>
   <EntityType Name="ApplicationMenu">
     <Key>
@@ -75,5 +76,20 @@
     <Property Name="Created" Type="DateTime" Precision="3" />
     <Property Name="Updated" Type="DateTime" Precision="3" />
     <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ViewRule">
+    <Key>
+      <PropertyRef Name="SysId" />
+    </Key>
+    <Property Name="SysId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Updated" Type="DateTime" Precision="3" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Int32" />
+    <Property Name="TableRef" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ColumnName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ColumnLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderSQ" Type="Int32" />
   </EntityType>
 </Schema>

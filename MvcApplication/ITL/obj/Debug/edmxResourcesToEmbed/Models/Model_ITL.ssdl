@@ -70,10 +70,26 @@
     <Property Name="Updated" Type="datetime" />
     <Property Name="Active" Type="int" />
   </EntityType>
+  <EntityType Name="ViewRule">
+    <Key>
+      <PropertyRef Name="SysId" />
+    </Key>
+    <Property Name="SysId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Active" Type="int" />
+    <Property Name="TableRef" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="ColumnName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ColumnLabel" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderSQ" Type="int" />
+  </EntityType>
   <EntityContainer Name="ITLModelStoreContainer">
     <EntitySet Name="ApplicationMenu" EntityType="Self.ApplicationMenu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Dictionary" EntityType="Self.Dictionary" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViewRule" EntityType="Self.ViewRule" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

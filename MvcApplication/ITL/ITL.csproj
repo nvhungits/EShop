@@ -119,11 +119,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\ApplicationMenuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
     <Compile Include="Controllers\SystemDefinitionController.cs" />
+    <Compile Include="Controllers\SystemUIController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ViewRuleController.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,6 +164,10 @@
       <DependentUpon>Model_ITL.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\ViewRule.cs">
+      <DependentUpon>Model_ITL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewRuleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -967,6 +975,9 @@
     <Content Include="Views\SystemDefinition\ApplicationMenu.cshtml" />
     <Content Include="Views\SystemDefinition\Module.cshtml" />
     <Content Include="Views\Shared\_TableCustom.cshtml" />
+    <Content Include="Views\Administrator\UserITL.cshtml" />
+    <Content Include="Views\SystemUI\ViewRule.cshtml" />
+    <Content Include="Views\ApplicationMenu\newRecord.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

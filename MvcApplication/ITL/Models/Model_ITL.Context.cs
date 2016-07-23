@@ -29,5 +29,6 @@ namespace ITL.Models
         public virtual DbSet<Dictionary> Dictionary { get; set; }
         public virtual DbSet<Module> Module { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<ViewRule> ViewRules { get; set; }
     }
 }

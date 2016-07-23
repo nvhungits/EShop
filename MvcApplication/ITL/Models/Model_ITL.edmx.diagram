@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="ITLModel.Dictionary" Width="1.5" PointX="2.75" PointY="0.5" />
         <EntityTypeShape EntityType="ITLModel.Module" Width="1.5" PointX="4.75" PointY="0.5" />
         <EntityTypeShape EntityType="ITLModel.User" Width="1.5" PointX="6.625" PointY="0.625" />
+        <EntityTypeShape EntityType="ITLModel.ViewRule" Width="1.5" PointX="8.625" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

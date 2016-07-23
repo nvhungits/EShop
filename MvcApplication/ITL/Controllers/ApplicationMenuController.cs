@@ -22,5 +22,10 @@ namespace ITL.Controllers
         {
             return application_menu_object.getAll();
         }
+
+        public ActionResult newRecord()
+        {
+            return View();
+        }
 	}
 }

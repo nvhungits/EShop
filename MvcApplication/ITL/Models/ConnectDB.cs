@@ -9,38 +9,24 @@ namespace ITL.Models
 {
     public class ConnectDB
     {
-        private String conStr;
-        private SqlConnection sqlcon;
+        public String conStr { set; get; }
+        public SqlConnection sqlcon { set; get; }
+        public String queryStr { set; get; }
+        public SqlCommand sqlcmd { set; get; }
 
-        public ConnectDB(String DB)
+        public ConnectDB() { }
+        public ConnectDB(String DB, String Table)
         {
             this.conStr = ConfigurationManager.ConnectionStrings[DB].ConnectionString;
             this.sqlcon = new SqlConnection(this.conStr);
-            try
-            {
-                this.sqlcon.Open();
-                Console.WriteLine("Connected to \'"+DB+"\' database");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error form ITL.ConnectDB\n" + e.Message);
-            }
+            this.queryStr = "Select * from " + Table;
+            sqlcmd = new SqlCommand(this.queryStr, this.sqlcon);
         }
 
-        public SqlCommand ConnectToTable(String table)
+        public void Close()
         {
-            String queryStr = "Select * from " + table;
-            SqlCommand sqlcmd = new SqlCommand(queryStr, this.sqlcon);
-            try
-            {
-                sqlcmd.Connection.Open();
-                Console.WriteLine("Connected to \'"+table+"\' Table");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error form ITL.ConnectToTable\n" + e.Message);
-            }
-            return sqlcmd;
+            this.sqlcon.Close();
+            this.sqlcmd.Connection.Close();
         }
     }
 }

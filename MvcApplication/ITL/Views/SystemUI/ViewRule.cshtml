@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "ViewRule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Web.Mvc
+@using ITL.Controllers;
+@Html.Partial(
+    "_TableCustom",
+    new ViewRuleController().getAll(),
+    new ViewDataDictionary {
+        { "PageHeader", "ViewRule" } ,
+        { "TableID", "ViewRule" }
+    }
+)
+

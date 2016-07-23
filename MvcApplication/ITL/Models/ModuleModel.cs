@@ -8,38 +8,43 @@ namespace ITL.Models
 {
     public class ModuleModel:Module
     {
-        List<ModuleModel> module_list = new List<ModuleModel>();
-        ConnectDB con = new ConnectDB("ITLDB");
+        private List<ModuleModel> module_list = new List<ModuleModel>();
+        private ConnectDB con = new ConnectDB("ITLDB","Module");
+        private SqlDataReader sqlr;
         public List<ModuleModel> getAll()
         {
-            SqlCommand sqlcmd = con.ConnectToTable("Module");
-            SqlDataReader sqlr = sqlcmd.ExecuteReader();
-            while (sqlr.Read())
+            try
             {
-                ModuleModel module = new ModuleModel();
-                try
+                this.con.sqlcmd.Connection.Open();
+                this.sqlr = this.con.sqlcmd.ExecuteReader();
+                while (this.sqlr.Read())
                 {
-                    module.SysId = sqlr.GetString(0);
-                    module.Title = sqlr.GetString(1);
-                    module.TableRef = sqlr.GetString(2);
-                    module.Name = sqlr.GetString(3);
-                    module.Roles = sqlr.GetString(4);
-                    module.Hint = sqlr.GetString(5);
-                    module.Image = sqlr.GetString(6);
-                    module.Created = sqlr.GetDateTime(7);
-                    module.Updated = sqlr.GetDateTime(8);
-                    module.Active = sqlr.GetInt32(9);
-                    module.ApplicationMenuId = sqlr.GetString(10);
-                    module.Action = sqlr.GetString(11);
-                    //add
+                    ModuleModel module = new ModuleModel();
+                    int i = 0;
+                    module.SysId = this.sqlr.GetString(i); i++;
+                    module.Title = this.sqlr.GetString(i); i++;
+                    module.TableRef = this.sqlr.GetString(i); i++;
+                    module.Name = this.sqlr.GetString(i); i++;
+                    module.Roles = this.sqlr.GetString(i); i++;
+                    module.Hint = this.sqlr.GetString(i); i++;
+                    module.Image = this.sqlr.GetString(i); i++;
+                    module.Created = this.sqlr.GetDateTime(i); i++;
+                    module.Updated = this.sqlr.GetDateTime(i); i++;
+                    module.Active = this.sqlr.GetInt32(i); i++;
+                    module.ApplicationMenuId = this.sqlr.GetString(i); i++;
+                    module.Action = this.sqlr.GetString(i); i++;
+                    //add to list
                     module_list.Add(module);
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
             }
-            sqlcmd.Connection.Close();
+            catch (Exception e)
+            {
+                System.Console.Out.WriteLine("Error ITL: " + e.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
             return module_list;
         }
 

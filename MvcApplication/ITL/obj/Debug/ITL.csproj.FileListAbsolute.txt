@@ -57,3 +57,4 @@ C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramew
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.dll
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.xml
 C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\Project\trunk\MvcApplication\ITL\obj\Debug\ITL.csprojResolveAssemblyReference.cache

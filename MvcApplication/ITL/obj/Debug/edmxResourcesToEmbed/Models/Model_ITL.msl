@@ -75,5 +75,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ViewRules">
+      <EntityTypeMapping TypeName="ITLModel.ViewRule">
+        <MappingFragment StoreEntitySet="ViewRule">
+          <ScalarProperty Name="OrderSQ" ColumnName="OrderSQ" />
+          <ScalarProperty Name="ColumnLabel" ColumnName="ColumnLabel" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TableRef" ColumnName="TableRef" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="SysId" ColumnName="SysId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
