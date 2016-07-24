@@ -29,7 +29,7 @@
                         <!-- Header Table -->
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th class=".">#</th>
                                  @foreach (var item in view_rule_list)
                                  {
                                      <td>@item.ColumnLabel</td>
@@ -52,7 +52,7 @@
                                     <!-- End Variable local in Table -->
                                     <tr>
                                         <td align="center">
-                                            <button type="button" class="btn btn-info btn-circle"></button>
+                                            <button type="button" class="btn btn-default btn-circle"></button>
                                         </td>
 
                                         <!--Loop define value-->
@@ -153,7 +153,7 @@
                                         <td align="center">
                                             <!--Action Button-->
                                             <button class="btn btn-success btn-circle" data-toggle="modal" data-target="#@edit"><i class="fa fa-link"></i></button>
-                                            <button class="btn btn-warning btn-circle" data-toggle="modal" data-target="#@remove"><i class="fa fa-times"></i></button>
+                                            <button class="btn btn-danger btn-circle" data-toggle="modal" data-target="#@remove"><i class="fa fa-times"></i></button>
                                             <!-- Modal -->
                                             <div class="modal fade" id="@remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
