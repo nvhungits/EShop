@@ -26,5 +26,6 @@ namespace ITL.Models
         public Nullable<System.DateTime> Updated { get; set; }
         public Nullable<int> Active { get; set; }
         public string Controller { get; set; }
+        public string ImageIcon { get; set; }
     }
 }

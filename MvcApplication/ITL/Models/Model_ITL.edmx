@@ -21,6 +21,7 @@
           <Property Name="Updated" Type="datetime" />
           <Property Name="Active" Type="int" />
           <Property Name="Controller" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageIcon" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Dictionary">
           <Key>
@@ -124,6 +125,7 @@
           <Property Name="Updated" Type="DateTime" Precision="3" />
           <Property Name="Active" Type="Int32" />
           <Property Name="Controller" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Dictionary">
           <Key>
@@ -202,6 +204,7 @@
           <EntitySetMapping Name="ApplicationMenu">
             <EntityTypeMapping TypeName="ITLModel.ApplicationMenu">
               <MappingFragment StoreEntitySet="ApplicationMenu">
+                <ScalarProperty Name="ImageIcon" ColumnName="ImageIcon" />
                 <ScalarProperty Name="Controller" ColumnName="Controller" />
                 <ScalarProperty Name="Active" ColumnName="Active" />
                 <ScalarProperty Name="Updated" ColumnName="Updated" />

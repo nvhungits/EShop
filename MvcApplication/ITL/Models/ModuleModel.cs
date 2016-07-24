@@ -50,7 +50,7 @@ namespace ITL.Models
 
         public List<ModuleModel> getByApplicationMenuId(String ID)
         {
-            IEnumerable<ModuleModel> module = from m in this.getAll() where m.ApplicationMenuId == ID select m;
+            IEnumerable<ModuleModel> module = from m in this.getAll() where m.ApplicationMenuId == ID && m.Active == 1 select m;
             return module.ToList(); ;
         }
     }

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="ApplicationMenu">
       <EntityTypeMapping TypeName="ITLModel.ApplicationMenu">
         <MappingFragment StoreEntitySet="ApplicationMenu">
+          <ScalarProperty Name="ImageIcon" ColumnName="ImageIcon" />
           <ScalarProperty Name="Controller" ColumnName="Controller" />
           <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="Updated" ColumnName="Updated" />

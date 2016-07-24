@@ -33,6 +33,7 @@ namespace ITL.Models
                     application_menu.Updated = this.sqlr.GetDateTime(9);
                     application_menu.Active = this.sqlr.GetInt32(10);
                     application_menu.Controller = this.sqlr.GetString(11);
+                    application_menu.ImageIcon = this.sqlr.GetString(12);
                     //add to list
                     this.application_menu_list.Add(application_menu);
                 }

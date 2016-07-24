@@ -1,0 +1,8 @@
+﻿@using ITL.Controllers;
+@using ITL.Models;
+@{
+    string PageHeader = this.ViewData.ContainsKey("PageHeader") ? this.ViewData["PageHeader"].ToString() : string.Empty;
+    string TableID = this.ViewData.ContainsKey("TableID") ? this.ViewData["TableID"].ToString() : string.Empty;
+    List<ViewRuleModel> view_rule_list = new ViewRuleController().getByTableRef(TableID);
+}
+
