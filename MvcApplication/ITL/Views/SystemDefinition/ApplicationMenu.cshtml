@@ -2,10 +2,10 @@
 @using ITL.Controllers;
 @{
     ViewBag.Title = "ApplicationMenu";
-    Layout = "~/Views/Shared/Admin/_LayoutPage.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial(
-    "Admin/_TableCustom",
+    "_TableCustom",
     new ApplicationMenuController().getAll(),
     new ViewDataDictionary {
         { "PageHeader", "Application Menu" } ,
