@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DW_SSAS">
-  <ConnectionProperties>
-    <Extension>OLEDB-MD</Extension>
-    <ConnectString>Data Source=localhost\MSSQL2K12;Initial Catalog=SSAS_DW</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
-  </ConnectionProperties>
-  <DataSourceID>d2d544f3-9e83-4603-b769-6f46bea4b699</DataSourceID>
-</RptDataSource>
