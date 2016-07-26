@@ -16,7 +16,8 @@ namespace ITL_v2
                 "~/Content/assets/global/plugins/jquery.cokie.min.js",
                 "~/Content/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js",
                 "~/Content/assets/global/plugins/jquery.blockui.min.js",
-                "~/Content/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js"
+                "~/Content/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js",
+                "~/Content/assets/assets/global/scripts/app.min.js"
                 ));
             //<!-- END CORE PLUGINS -->
             //<!-- BEGIN PAGE LEVEL SCRIPTS -->
@@ -51,7 +52,10 @@ namespace ITL_v2
                 /*easypiechart*/
                 "~/Content/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js",
                 /*sparkline*/
-                "~/Content/assets/global/plugins/jquery.sparkline.min.js"
+                "~/Content/assets/global/plugins/jquery.sparkline.min.js",
+                /*Data tables*/
+                "~/Content/assets/global/plugins/datatables/datatables.min.js",
+                "~/Content/assets/pages/scripts/table-datatables-managed.min.js"
                 ));
                 /*MAP*/
                 bundles.Add(new ScriptBundle("~/bundles/MAP").Include(
@@ -94,7 +98,9 @@ namespace ITL_v2
             //<!-- BEGIN PAGE LEVEL PLUGINS -->
             bundles.Add(new StyleBundle("~/Content/PAGE").Include(
                 "~/Content/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css",
-                "~/Content/assets/admin/pages/css/tasks.css"
+                "~/Content/assets/admin/pages/css/tasks.css",
+                "~/Content/assets/global/plugins/datatables/datatables.min.css",
+                "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css"
                 ));
             //<!-- END PAGE LEVEL PLUGINS -->
             //<!-- BEGIN THEME LAYOUT STYLES -->
