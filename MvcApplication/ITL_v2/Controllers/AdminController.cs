@@ -14,5 +14,9 @@ namespace ITL_v2.Controllers
         {
             return View();
         }
+        public ActionResult test()
+        {
+            return View();
+        }
 	}
 }

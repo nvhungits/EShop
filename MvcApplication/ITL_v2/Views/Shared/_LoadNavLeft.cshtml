@@ -1,20 +1,27 @@
 ﻿@using ITL_v2.Controllers
 @{
-    foreach(var item in new ApplicationMenuController().getAll())
+    <li class="nav-item start active open">
+        <a href="" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">Dashboard</span>
+        </a>
+    </li>
+    foreach (var item in new ApplicationMenuController().getAll())
     {
-        <li>
-            <a href="javascript:;">
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="@item.ImageClass"></i>
                 <span class="title">@item.Title</span>
-                @if (new ModuleController().getByApplicationMenuID(item.SysId).Count > 0) { 
+                @if (new ModuleController().getByApplicationMenuID(item.SysId).Count > 0)
+                {
                     <span class="arrow"></span>
                 }
             </a>
             <ul class="sub-menu">
                 @foreach (var subitem_1 in new ModuleController().getByApplicationMenuID(item.SysId))
                 {
-                <li>
-                    <a href="@Url.Action(@subitem_1.Action, @subitem_1.Controller)">
+                <li class="nav-item">
+                    <a href="@Url.Action(@subitem_1.Action, @subitem_1.Controller)" class="nav-link nav-toggle">
                         <i class="@subitem_1.ImageClass"></i>
                         @subitem_1.Title
                     </a>
@@ -22,7 +29,7 @@
                 </li>
                 }
             </ul>
-            
+
         </li>
     }
 }
