@@ -249,6 +249,7 @@
                         if (item.isParent == true)
                         {
                             <li>
+                                @{}
                                 <a href="#"><i class="@item.imageClass"></i> @item.nameOption<span class="fa arrow"></span></a>                          
                                 <ul class="nav nav-second-level">
                                     @foreach (var child in Model.Where(p => p.parentId == item.Id))
